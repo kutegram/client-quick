@@ -72,7 +72,7 @@ Window {
         id: sbar
 
         width: parent.width
-        state: root.fullScreen ? "Hidden" : "Visible"
+        state: QTC_DISABLE_STATUS_BAR ? "Hidden" : root.fullScreen ? "Hidden" : "Visible"
 
         states: [
             State {
