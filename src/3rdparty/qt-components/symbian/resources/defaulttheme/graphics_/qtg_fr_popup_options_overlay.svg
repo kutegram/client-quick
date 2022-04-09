@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 15.0.2, SVG Export Plug-In  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" [
+	<!ENTITY ns_flows "http://ns.adobe.com/Flows/1.0/">
+]>
+<svg version="1.1"
+	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/"
+	 x="0px" y="0px" width="360px" height="256px" viewBox="0 0 360 256" enable-background="new 0 0 360 256" xml:space="preserve">
+<defs>
+</defs>
+<path fill="#1E1E1E" d="M0,0v256h360V0H0z M347.5,230c0,7.444-6.056,13.5-13.5,13.5H26c-7.444,0-13.5-6.056-13.5-13.5V26
+	c0-7.444,6.056-13.5,13.5-13.5h308c7.444,0,13.5,6.056,13.5,13.5V230z"/>
+<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="179.9995" y1="0" x2="179.9995" y2="70.587">
+	<stop  offset="0" style="stop-color:#FFFFFF"/>
+	<stop  offset="1" style="stop-color:#FFFFFF;stop-opacity:0"/>
+</linearGradient>
+<path opacity="0.15" fill="url(#SVGID_1_)" d="M0,0v256h360V0H0z M347.5,230c0,7.444-6.056,13.5-13.5,13.5H26
+	c-7.444,0-13.5-6.056-13.5-13.5V26c0-7.444,6.056-13.5,13.5-13.5h308c7.444,0,13.5,6.056,13.5,13.5V230z"/>
+<linearGradient id="SVGID_2_" gradientUnits="userSpaceOnUse" x1="179.9995" y1="11.0718" x2="179.9995" y2="70.8968">
+	<stop  offset="0" style="stop-color:#4B4B4B"/>
+	<stop  offset="1" style="stop-color:#262626"/>
+</linearGradient>
+<path fill="url(#SVGID_2_)" d="M334,12H26c-7.732,0-14,6.27-14,14v204c0,7.732,6.268,14,14,14h308c7.732,0,14-6.268,14-14V26
+	C348,18.27,341.732,12,334,12z M347,230c0,7.168-5.832,13-13,13H26c-7.168,0-13-5.832-13-13V26c0-7.168,5.832-13,13-13h308
+	c7.168,0,13,5.832,13,13V230z"/>
+<linearGradient id="SVGID_3_" gradientUnits="userSpaceOnUse" x1="179.9995" y1="0.0054" x2="179.9995" y2="0.995">
+	<stop  offset="0" style="stop-color:#FFFFFF"/>
+	<stop  offset="1" style="stop-color:#FFFFFF;stop-opacity:0"/>
+</linearGradient>
+<rect opacity="0.15" fill="url(#SVGID_3_)" width="360" height="1"/>
+</svg>

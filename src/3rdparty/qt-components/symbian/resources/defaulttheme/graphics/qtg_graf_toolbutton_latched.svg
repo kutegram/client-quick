@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1 Tiny//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11-tiny.dtd">
+<svg baseProfile="tiny" height="60px" version="1.1" viewBox="0 0 60 60" width="60px" x="0px" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" y="0px">
+<radialGradient cx="30" cy="30" gradientUnits="userSpaceOnUse" id="SVGID_1_" r="30">
+<stop offset="0" style="stop-color:#FFFFFF;stop-opacity:0.6"/>
+<stop offset="1" style="stop-color:#FFFFFF;stop-opacity:0"/>
+</radialGradient>
+<rect fill="url(#SVGID_1_)" height="60" width="60"/>
+</svg>

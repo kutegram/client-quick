@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1 Tiny//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11-tiny.dtd">
+<svg baseProfile="tiny" height="42px" version="1.1" viewBox="0 0 336 42" width="336px" x="0px" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" y="0px">
+<path d="M316,0H20C5.047,0,0,5.047,0,20v2c0,14.953,5.047,20,20,20h296c14.953,0,20-5.047,20-20v-2  C336,5.047,330.953,0,316,0z" fill="#1080DD"/>
+<path d="M20,40C6.206,40,2,35.794,2,22v-2C2,6.206,6.206,2,20,2h296c13.794,0,18,4.206,18,18v2  c0,13.795-4.206,18-18,18H20z" fill="#F4F4F4"/>
+<path d="M316,2H20C6.206,2,2,6.206,2,20v2C2,8.206,6.206,4,20,4h296c13.794,0,18,4.206,18,18v-2  C334,6.206,329.794,2,316,2z" fill-opacity="0.07" stroke-opacity="0.07"/>
+<path d="M316,2H20C6.206,2,2,6.206,2,20v1C2,7.206,6.206,3,20,3h296c13.794,0,18,4.206,18,18v-1  C334,6.206,329.794,2,316,2z" fill-opacity="0.15" stroke-opacity="0.15"/>
+<rect fill="none" height="42" width="336"/>
+</svg>

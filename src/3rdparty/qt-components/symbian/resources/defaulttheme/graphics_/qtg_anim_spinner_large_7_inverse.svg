@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1 Tiny//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11-tiny.dtd">
+<svg baseProfile="tiny" height="70px" version="1.1" viewBox="0 0 70 70" width="70px" x="0px" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" y="0px">
+<rect fill="none" height="70" width="70"/>
+<path d="M35,5C18.433,5,5,18.432,5,35s13.433,30,30,30c16.568,0,30-13.432,30-30S51.568,5,35,5z M35,61  C20.642,61,9,49.359,9,35S20.642,9,35,9c14.357,0,26,11.641,26,26S49.357,61,35,61z" fill-opacity="0.15" stroke-opacity="0.15"/>
+<radialGradient cx="-271.5195" cy="358.1738" gradientTransform="matrix(-0.809 -0.5878 -0.5878 0.809 8.1184 -389.938)" gradientUnits="userSpaceOnUse" id="SVGID_1_" r="55.8818">
+<stop offset="0" style="stop-color:#FFFFFF"/>
+<stop offset="1" style="stop-color:#FFFFFF;stop-opacity:0"/>
+</radialGradient>
+<path d="M17.366,59.271c13.403,9.738,32.165,6.769,41.904-6.637c9.739-13.404,6.767-32.166-6.637-41.904  c-13.404-9.738-32.167-6.767-41.905,6.636C0.992,30.771,3.962,49.531,17.366,59.271z M50.283,13.966  c11.615,8.439,14.191,24.7,5.752,36.316c-8.44,11.618-24.701,14.191-36.317,5.752C8.104,47.597,5.525,31.335,13.966,19.717  C22.407,8.101,38.667,5.526,50.283,13.966z" fill="url(#SVGID_1_)"/>
+</svg>

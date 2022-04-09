@@ -1,0 +1,3 @@
+plugin embedded_qt_components_plugin
+Checkable 1.0 Checkable.qml
+CheckableGroup 1.0 CheckableGroup.qml

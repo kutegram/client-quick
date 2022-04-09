@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1 Tiny//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11-tiny.dtd">
+<svg baseProfile="tiny" height="50px" version="1.1" viewBox="0 0.002 110 50" width="110px" x="0px" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" y="0px">
+<linearGradient gradientUnits="userSpaceOnUse" id="SVGID_1_" x1="55.0005" x2="55.0005" y1="45.001" y2="5.1418">
+<stop offset="0" style="stop-color:#FFFFFF"/>
+<stop offset="0.0057" style="stop-color:#FFFFFF"/>
+<stop offset="1" style="stop-color:#FFFFFF;stop-opacity:0"/>
+</linearGradient>
+<rect fill="url(#SVGID_1_)" fill-opacity="0.2" height="1" stroke-opacity="0.2" width="110" y="44.001"/>
+<linearGradient gradientUnits="userSpaceOnUse" id="SVGID_2_" x1="55.0005" x2="55.0005" y1="45.002" y2="5.1428">
+<stop offset="0" style="stop-color:#FFFFFF"/>
+<stop offset="0.0057" style="stop-color:#FFFFFF"/>
+<stop offset="1" style="stop-color:#FFFFFF;stop-opacity:0"/>
+</linearGradient>
+<rect fill="url(#SVGID_2_)" fill-opacity="0.2" height="1" stroke-opacity="0.2" width="110" y="5.001"/>
+<linearGradient gradientUnits="userSpaceOnUse" id="SVGID_3_" x1="54.9995" x2="54.9995" y1="3.9595" y2="46.1824">
+<stop offset="0" style="stop-color:#000000"/>
+<stop offset="0.0057" style="stop-color:#000000"/>
+<stop offset="1" style="stop-color:#000000;stop-opacity:0"/>
+</linearGradient>
+<rect fill="url(#SVGID_3_)" height="1" width="110" y="45.001"/>
+<linearGradient gradientUnits="userSpaceOnUse" id="SVGID_4_" x1="54.9995" x2="54.9995" y1="3.959" y2="46.1819">
+<stop offset="0" style="stop-color:#000000"/>
+<stop offset="0.0057" style="stop-color:#000000"/>
+<stop offset="1" style="stop-color:#000000;stop-opacity:0"/>
+</linearGradient>
+<rect fill="url(#SVGID_4_)" height="1" width="110" y="4.001"/>
+<rect fill="#FFFFFF" fill-opacity="0.05" height="38" stroke-opacity="0.05" width="1" y="6.001"/>
+<rect fill="none" height="50" width="110"/>
+<linearGradient gradientUnits="userSpaceOnUse" id="SVGID_5_" x1="55.4995" x2="55.4995" y1="6.3345" y2="44.0029">
+<stop offset="0" style="stop-color:#FFFFFF"/>
+<stop offset="1" style="stop-color:#FFFFFF;stop-opacity:0.5"/>
+</linearGradient>
+<rect fill="url(#SVGID_5_)" fill-opacity="0.2" height="38" stroke-opacity="0.2" width="109" x="1" y="6.001"/>
+</svg>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1 Tiny//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11-tiny.dtd">
+<svg baseProfile="tiny" height="50px" version="1.1" viewBox="0 0 50 50" width="50px" x="0px" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" y="0px">
+<radialGradient cx="25" cy="25" gradientUnits="userSpaceOnUse" id="SVGID_1_" r="25">
+<stop offset="0" style="stop-color:#231F20"/>
+<stop offset="0.68" style="stop-color:#231F20"/>
+<stop offset="1" style="stop-color:#231F20;stop-opacity:0"/>
+</radialGradient>
+<circle cx="25" cy="25" fill="url(#SVGID_1_)" fill-opacity="0.35" r="25" stroke-opacity="0.35"/>
+</svg>

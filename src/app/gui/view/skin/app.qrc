@@ -1,0 +1,9 @@
+<RCC>
+    <qresource prefix="/layout">
+        <file alias="main.qml">layout/main.qml</file>
+        <file alias="DemoPage.qml">layout/DemoPage.qml</file>
+    </qresource>
+    <qresource prefix="/images">
+        <file alias="logo.png">images/logo.png</file>
+    </qresource>
+</RCC>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1 Tiny//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11-tiny.dtd">
+<svg baseProfile="tiny" height="70px" version="1.1" viewBox="0 0.037 70 70" width="70px" x="0px" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" y="0px">
+<radialGradient cx="35.002" cy="4.8086" gradientTransform="matrix(0.309 -0.9511 0.9511 0.309 -9.103 57.4721)" gradientUnits="userSpaceOnUse" id="SVGID_1_" r="55.8812">
+<stop offset="0" style="stop-color:#FFFFFF"/>
+<stop offset="1" style="stop-color:#3C3C3C;stop-opacity:0.6"/>
+</radialGradient>
+<path d="M6.469,25.729c-5.122,15.758,3.504,32.684,19.26,37.804c15.758,5.119,32.683-3.505,37.803-19.264  c5.118-15.756-3.504-32.68-19.262-37.801C28.513,1.348,11.587,9.971,6.469,25.729z M59.728,43.033  C55.29,56.689,40.622,64.165,26.965,59.728C13.309,55.289,5.834,40.621,10.272,26.965C14.71,13.309,29.377,5.834,43.034,10.271  C56.69,14.71,64.164,29.378,59.728,43.033z" fill="url(#SVGID_1_)"/>
+<rect fill="none" height="70" width="70"/>
+</svg>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1 Tiny//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11-tiny.dtd">
+<svg baseProfile="tiny" height="30px" version="1.1" viewBox="-0.001 0 30 30" width="30px" x="0px" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" y="0px">
+<path d="M29.599,15.4C29.599,26.217,25.817,30,15,30C4.181,30,0.399,26.217,0.399,15.4  C0.399,4.583,4.181,0.799,15,0.799C25.817,0.799,29.599,4.583,29.599,15.4z" fill-opacity="0.2" stroke-opacity="0.2"/>
+<path d="M29.516,14.515c0,10.757-3.762,14.517-14.516,14.517c-10.756,0-14.516-3.76-14.516-14.517  C0.484,3.762,4.244,0,15,0C25.754,0,29.516,3.762,29.516,14.515z" fill="#FFFFFF"/>
+<path d="M15,28.063c-10.258,0-13.547-3.291-13.547-13.549C1.453,4.258,4.742,0.969,15,0.969  s13.547,3.289,13.547,13.546C28.547,24.772,25.258,28.063,15,28.063z" fill="#E1E1E1"/>
+<linearGradient gradientUnits="userSpaceOnUse" id="SVGID_1_" x1="14.9995" x2="14.9995" y1="1.0596" y2="15.2087">
+<stop offset="0" style="stop-color:#FFFFFF"/>
+<stop offset="1" style="stop-color:#FFFFFF;stop-opacity:0"/>
+</linearGradient>
+<path d="M15,1.937c10.089,0,13.432,3.198,13.54,13.063c0.002-0.165,0.007-0.315,0.007-0.484  C28.547,4.258,25.258,0.969,15,0.969S1.453,4.258,1.453,14.515c0,0.169,0.007,0.319,0.009,0.484C1.568,5.135,4.911,1.937,15,1.937z" fill="url(#SVGID_1_)" fill-opacity="0.25" stroke-opacity="0.25"/>
+<linearGradient gradientUnits="userSpaceOnUse" id="SVGID_2_" x1="15.0005" x2="15.0005" y1="27.9238" y2="1.0494">
+<stop offset="0" style="stop-color:#FFFFFF;stop-opacity:0"/>
+<stop offset="1" style="stop-color:#FFFFFF"/>
+</linearGradient>
+<path d="M15,28.063c-10.258,0-13.547-3.291-13.547-13.549C1.453,4.258,4.742,0.969,15,0.969  s13.547,3.289,13.547,13.546C28.547,24.772,25.258,28.063,15,28.063z" fill="url(#SVGID_2_)" fill-opacity="0.7" stroke-opacity="0.7"/>
+<linearGradient gradientUnits="userSpaceOnUse" id="SVGID_3_" x1="15.0005" x2="15.0005" y1="27.9912" y2="14.0568">
+<stop offset="0" style="stop-color:#000000"/>
+<stop offset="1" style="stop-color:#000000;stop-opacity:0"/>
+</linearGradient>
+<path d="M15,27.063c-10.084,0-13.426-3.196-13.536-13.049c-0.002,0.17-0.011,0.326-0.011,0.5  c0,10.258,3.289,13.549,13.547,13.549s13.547-3.291,13.547-13.549c0-0.174-0.009-0.33-0.011-0.5  C28.426,23.867,25.084,27.063,15,27.063z" fill="url(#SVGID_3_)" fill-opacity="0.05" stroke-opacity="0.05"/>
+<rect fill="none" height="30" width="30"/>
+</svg>

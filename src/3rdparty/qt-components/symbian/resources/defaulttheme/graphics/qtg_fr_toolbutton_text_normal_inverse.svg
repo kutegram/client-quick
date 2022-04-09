@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1 Tiny//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11-tiny.dtd">
+<svg baseProfile="tiny" height="50px" version="1.1" viewBox="0 0 110 50" width="110px" x="0px" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" y="0px">
+<linearGradient gradientTransform="matrix(-1 0 0 -1 -6085.9746 -5168.0029)" gradientUnits="userSpaceOnUse" id="SVGID_1_" x1="-6140.9771" x2="-6140.9771" y1="-5212.0029" y2="-5174.1406">
+<stop offset="0" style="stop-color:#FFFFFF;stop-opacity:0.2"/>
+<stop offset="1" style="stop-color:#FFFFFF"/>
+</linearGradient>
+<path d="M21.002,6h68c14.383,0,19,4.617,19,19s-4.617,19-19,19h-68c-14.384,0-19-4.617-19-19  S6.618,6,21.002,6z" fill="url(#SVGID_1_)" fill-opacity="0.6" stroke-opacity="0.6"/>
+<linearGradient gradientUnits="userSpaceOnUse" id="SVGID_2_" x1="54.9995" x2="54.9995" y1="3.998" y2="45.8465">
+<stop offset="0" style="stop-color:#FFFFFF;stop-opacity:0.1"/>
+<stop offset="0.8625" style="stop-color:#FFFFFF;stop-opacity:0.8762"/>
+<stop offset="1" style="stop-color:#FFFFFF"/>
+</linearGradient>
+<path d="M89,3.998H21c-15.558,0-21,5.447-21,21c0,15.561,5.442,21,21,21h68c15.559,0,21-5.439,21-21  C110,9.445,104.559,3.998,89,3.998z M89,44.998H21c-14.953,0-20-5.047-20-20s5.047-20,20-20h68c14.953,0,20,5.047,20,20  S103.953,44.998,89,44.998z" fill="url(#SVGID_2_)"/>
+<linearGradient gradientUnits="userSpaceOnUse" id="SVGID_3_" x1="55.0005" x2="55.0005" y1="44.665" y2="4.9934">
+<stop offset="0" style="stop-color:#000000;stop-opacity:0.1"/>
+<stop offset="0.8625" style="stop-color:#000000;stop-opacity:0.8762"/>
+<stop offset="1" style="stop-color:#000000"/>
+</linearGradient>
+<path d="M89,4.998H21c-14.953,0-20,5.047-20,20s5.047,20,20,20h68c14.953,0,20-5.047,20-20  S103.953,4.998,89,4.998z M89,43.998H21c-14.384,0-19-4.617-19-19s4.616-19,19-19h68c14.383,0,19,4.617,19,19  S103.383,43.998,89,43.998z" fill="url(#SVGID_3_)" fill-opacity="0.2" stroke-opacity="0.2"/>
+<rect fill="none" height="50" width="110"/>
+</svg>

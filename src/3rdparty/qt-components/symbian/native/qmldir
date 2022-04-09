@@ -1,0 +1,10 @@
+plugin symbianpluginport_1_0
+Button 1.0 Button.qml
+ListHeading 1.0 ListHeading.qml
+ListItem 1.0 ListItem.qml
+ListItemText 1.0 ListItemText.qml
+StatusBar 1.0 StatusBar.qml
+ToolBar 1.0 ToolBar.qml
+ToolBarLayout 1.0 ToolBarLayout.qml
+ToolButton 1.0 ToolButton.qml
+Window 1.0 Window.qml

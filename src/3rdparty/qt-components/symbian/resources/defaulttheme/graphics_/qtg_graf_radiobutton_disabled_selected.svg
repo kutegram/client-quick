@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1 Tiny//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11-tiny.dtd">
+<svg baseProfile="tiny" height="42px" version="1.1" viewBox="0 0 42 42" width="42px" x="0px" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" y="0px">
+<path d="M21,3.857L21,3.857C8.302,3.857,3.856,8.301,3.856,21c0,12.701,4.445,17.143,17.144,17.143  l0,0c12.698,0,17.143-4.441,17.143-17.143C38.143,8.301,33.698,3.857,21,3.857z" fill="#1080DD" fill-opacity="0.4" stroke-opacity="0.4"/>
+<linearGradient gradientUnits="userSpaceOnUse" id="SVGID_1_" x1="20.9995" x2="20.9995" y1="4.1431" y2="38.7565">
+<stop offset="0" style="stop-color:#FFFFFF"/>
+<stop offset="0.1404" style="stop-color:#FFFFFF;stop-opacity:0.8596"/>
+<stop offset="1" style="stop-color:#FFFFFF;stop-opacity:0"/>
+</linearGradient>
+<path d="M21,3.857L21,3.857C8.302,3.857,3.856,8.301,3.856,21  c0,12.701,4.445,17.143,17.144,17.143l0,0c12.698,0,17.143-4.441,17.143-17.143C38.143,8.301,33.698,3.857,21,3.857z" fill="url(#SVGID_1_)" fill-opacity="0.1" stroke-opacity="0.1"/>
+<linearGradient gradientUnits="userSpaceOnUse" id="SVGID_2_" x1="21.0005" x2="21.0005" y1="39" y2="3.0005">
+<stop offset="0" style="stop-color:#FFFFFF"/>
+<stop offset="1" style="stop-color:#FFFFFF;stop-opacity:0.5"/>
+</linearGradient>
+<path d="M21,3.857c12.698,0,17.143,4.443,17.143,17.143c0,12.701-4.444,17.143-17.143,17.143  l0,0C8.302,38.143,3.856,33.701,3.856,21C3.856,8.301,8.302,3.857,21,3.857L21,3.857 M21,3L21,3C7.878,3,3,7.879,3,21  c0,13.123,4.878,18,18,18l0,0c13.121,0,18-4.877,18-18C39,7.879,34.121,3,21,3L21,3z" fill="url(#SVGID_2_)" fill-opacity="0.15" stroke-opacity="0.15"/>
+<path d="M21,3.857C8.302,3.857,3.856,8.301,3.856,21c0,12.701,4.445,17.143,17.144,17.143  S38.143,33.701,38.143,21C38.143,8.301,33.698,3.857,21,3.857z M21,35.572C9.833,35.572,6.429,32.168,6.429,21  C6.429,9.834,9.833,6.43,21,6.43c11.168,0,14.571,3.404,14.571,14.57C35.571,32.168,32.168,35.572,21,35.572z" fill="url(#SVGID_3_)" fill-opacity="0.02" stroke-opacity="0.02"/>
+<path d="M21,3.857C8.302,3.857,3.856,8.301,3.856,21c0,12.701,4.445,17.143,17.144,17.143  S38.143,33.701,38.143,21C38.143,8.301,33.698,3.857,21,3.857z M21,36.43C9.321,36.43,5.571,32.68,5.571,21S9.321,5.572,21,5.572  C32.68,5.572,36.429,9.32,36.429,21S32.68,36.43,21,36.43z" fill="url(#SVGID_3_)" fill-opacity="0.04" stroke-opacity="0.04"/>
+<linearGradient gradientUnits="userSpaceOnUse" id="SVGID_5_" x1="20.9995" x2="20.9995" y1="4.5005" y2="37.2861">
+<stop offset="0" style="stop-color:#000000"/>
+<stop offset="1" style="stop-color:#000000;stop-opacity:0"/>
+</linearGradient>
+<path d="M21,3.857C8.302,3.857,3.856,8.301,3.856,21c0,12.701,4.445,17.143,17.144,17.143  S38.143,33.701,38.143,21C38.143,8.301,33.698,3.857,21,3.857z M21,37.285C8.824,37.285,4.714,33.178,4.714,21  C4.714,8.824,8.824,4.715,21,4.715c12.177,0,16.285,4.109,16.285,16.285C37.285,33.178,33.177,37.285,21,37.285z" fill="url(#SVGID_5_)" fill-opacity="0.06" stroke-opacity="0.06"/>
+<path d="M20.995,15.369c-5.471,0-6.661,2.371-6.661,6.738c0,4.373,1.226,6.748,6.661,6.748  c5.471,0,6.661-2.367,6.661-6.732C27.656,17.75,26.433,15.369,20.995,15.369z" fill-opacity="0.2" stroke-opacity="0.2"/>
+<path d="M20.995,14.002c-5.471,0-6.661,2.373-6.661,6.736c0,4.377,1.226,6.75,6.661,6.75  c5.471,0,6.661-2.367,6.661-6.73C27.656,16.383,26.433,14.002,20.995,14.002z" fill="#FFFFFF" fill-opacity="0.4" stroke-opacity="0.4"/>
+<rect fill="none" height="42" width="42"/>
+<defs>
+<linearGradient gradientUnits="userSpaceOnUse" id="SVGID_3_" x1="20.9995" x2="20.9995" y1="4.5005" y2="37.2861">
+<stop offset="0" style="stop-color:#000000"/>
+<stop offset="1" style="stop-color:#000000;stop-opacity:0"/>
+</linearGradient>
+</defs>
+</svg>
