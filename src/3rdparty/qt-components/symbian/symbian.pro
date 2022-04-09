@@ -6,10 +6,14 @@ TEMPLATE = lib
 TARGET = $$SYMBIAN_PLUGIN.target
 INCLUDEPATH += $$PWD $$PWD/indicators
 
-CONFIG += qt plugin mobility
+CONFIG += qt plugin
 QT += declarative svg network script
-MOBILITY += feedback systeminfo
-DEFINES += HAVE_MOBILITY
+
+symbian {
+    CONFIG += mobility
+    MOBILITY += feedback systeminfo
+    DEFINES += HAVE_MOBILITY
+}
 
 SOURCES += \
 	plugin.cpp \
