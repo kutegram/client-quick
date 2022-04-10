@@ -13,11 +13,15 @@ INCLUDEPATH += \
 	"../"
 
 HEADERS += \
-    application.h
+    application.h \
+    dialogslistmodel.h
 
 SOURCES += \
 	main.cpp \
-    application.cpp
+    application.cpp \
+    dialogslistmodel.cpp
+
+include(../../library/library.pri)
 
 symbian {
 	isEmpty(ICON):exists($${TARGET}.svg):ICON = $${TARGET}.svg

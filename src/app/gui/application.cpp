@@ -12,6 +12,9 @@ namespace demo { namespace gui {
 Application::Application(int argc, char *argv[])
 	: QApplication(argc, argv)
 {
+#ifdef QT_KEYPAD_NAVIGATION
+    QApplication::setNavigationMode(Qt::NavigationModeCursorAuto);
+#endif
 }
 
 int Application::run() {
@@ -19,7 +22,7 @@ int Application::run() {
         splashScreen->showNormal();
 	QScopedPointer<QDeclarativeView> applicationWindow(buildRootView());
 	splashScreen->finish(applicationWindow.data());
-        applicationWindow->showNormal();
+    applicationWindow->showNormal();
 	return QApplication::exec();
 }
 

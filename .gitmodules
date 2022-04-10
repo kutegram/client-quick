@@ -1,0 +1,3 @@
+[submodule "src/library"]
+	path = src/library
+	url = https://github.com/kutegram/library.git

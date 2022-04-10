@@ -2,7 +2,10 @@ QML_IMPORT_PATH = $$APP_INSTALL_IMPORTS
 
 SIMULATOR_QML_FILES += \
 	view/skin/layout/main.qml \
-	view/skin/layout/DemoPage.qml
+    view/skin/layout/IntroPage.qml \
+    view/skin/layout/PhonePage.qml \
+    view/skin/layout/CodePage.qml \
+    view/skin/layout/DialogsPage.qml
 
 OTHER_FILES += $$SIMULATOR_QML_FILES $$SIMULATOR_QML_IMAGES
 

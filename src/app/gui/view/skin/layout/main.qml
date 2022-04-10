@@ -1,8 +1,42 @@
 import QtQuick 1.0
 import com.nokia.symbian 1.0
+import ru.curoviyxru.kutegram 1.0
 
 ApplicationWindow {
-	id: root
-	Component { id: demoPage; DemoPage {} }
-	Component.onCompleted: pageStack.push(demoPage)
+    id: root
+
+    TelegramClient {
+        id: telegram
+    }
+
+    Component { id: introPage; IntroPage {} }
+    Component { id: phonePage; PhonePage {} }
+    Component { id: codePage; CodePage {} }
+    Component { id: dialogsPage; DialogsPage {} }
+
+    Connections {
+        target: telegram
+        onStateChanged: {
+            switch (state) {
+            case TelegramClient.INITED:
+                if (pageStack.depth == 1 && !telegram.isLoggedIn()) pageStack.push(phonePage);
+                break;
+            case TelegramClient.LOGGED_IN:
+                pageStack.push(dialogsPage); //TODO: do not allow to push dialogsPage twice
+                break;
+            }
+        }
+        onGotSentCode: {
+            if (pageStack.depth == 2 && !telegram.isLoggedIn()) pageStack.push(codePage);
+        }
+    }
+
+    Component.onCompleted: {
+        if (!telegram.isLoggedIn()) {
+            pageStack.push(introPage);
+        }
+        else {
+            telegram.start();
+        }
+    }
 }

@@ -1,7 +1,10 @@
 <RCC>
     <qresource prefix="/layout">
         <file alias="main.qml">layout/main.qml</file>
-        <file alias="DemoPage.qml">layout/DemoPage.qml</file>
+        <file alias="PhonePage.qml">layout/PhonePage.qml</file>
+        <file alias="IntroPage.qml">layout/IntroPage.qml</file>
+        <file alias="CodePage.qml">layout/CodePage.qml</file>
+        <file alias="DialogsPage.qml">layout/DialogsPage.qml</file>
     </qresource>
     <qresource prefix="/images">
         <file alias="logo.png">images/logo.png</file>

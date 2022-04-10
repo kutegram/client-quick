@@ -4,3 +4,16 @@ Makefile
 *.Release
 *.user
 install
+bld.inf
+ABLD.BAT
+moc
+*.mk
+*.mmp
+*.def
+*.qtplugin
+qrc_app.cpp
+*.loc
+*.rss
+*.pkg
+*.cache
+qrc_symbian.cpp
