@@ -14,12 +14,14 @@ INCLUDEPATH += \
 
 HEADERS += \
     application.h \
-    dialogslistmodel.h
+    dialogslistmodel.h \
+    historylistmodel.h
 
 SOURCES += \
 	main.cpp \
     application.cpp \
-    dialogslistmodel.cpp
+    dialogslistmodel.cpp \
+    historylistmodel.cpp
 
 include(../../library/library.pri)
 

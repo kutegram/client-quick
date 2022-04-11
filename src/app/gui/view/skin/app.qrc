@@ -5,8 +5,12 @@
         <file alias="IntroPage.qml">layout/IntroPage.qml</file>
         <file alias="CodePage.qml">layout/CodePage.qml</file>
         <file alias="DialogsPage.qml">layout/DialogsPage.qml</file>
+        <file alias="HistoryPage.qml">layout/HistoryPage.qml</file>
     </qresource>
     <qresource prefix="/images">
         <file alias="logo.png">images/logo.png</file>
+    </qresource>
+    <qresource prefix="/icons">
+        <file alias="create_message.svg">icons/hicolor/scalable/toolbar/create_message.svg</file>
     </qresource>
 </RCC>

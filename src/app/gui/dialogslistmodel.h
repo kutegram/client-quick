@@ -4,7 +4,7 @@
 #include <QAbstractListModel>
 #include <QMutex>
 #include <QHash>
-#include "tl.h"
+#include "telegramstream.h"
 
 class TelegramClient;
 
@@ -15,10 +15,11 @@ class DialogsListModel : public QAbstractListModel
     Q_ENUMS(ModelRole)
 public:
     enum ModelRole {
-        TitleRole = Qt::UserRole + 1,
+        DialogIdRole = Qt::UserRole + 1,
+        TitleRole,
         AvatarRole,
         MessageRole,
-        MessageTimeRole,
+        TimestampRole,
         UnreadCountRole
     };
 
@@ -36,7 +37,9 @@ public slots:
     void tryLoad();
     void client_gotDialogs(qint64 mtm, qint32 count, TVector d, TVector m, TVector c, TVector u);
 private:
-    QList<TObject> _list;
+    QList<QByteArray> _list;
+
+    QHash<QByteArray, TObject> _items;
 
     QHash<qint32, TObject> _messages;
     QHash<qint64, TObject> _chats;

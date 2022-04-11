@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 15.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Ebene_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="67px" height="57px" viewBox="0 0 67 57" enable-background="new 0 0 67 57" xml:space="preserve">
+<rect fill="none" width="67" height="57"/>
+<path opacity="0.15" enable-background="new    " d="M20,51c-0.553,0-1-0.447-1-1v-4.125c0,0.553-0.447,1-1,1h-4
+	c-1.483,0-3-0.342-3-2.875V25c0-2.074,0.925-3,3-3h6.25c-0.553,0-1-0.447-1-1V6c0-0.552,0.447-1,1-1h27.5c0.553,0,1,0.448,1,1v15
+	c0,0.553-0.447,1-1,1H54c2.075,0,3,0.926,3,3v19c0,2.533-1.518,2.875-3,2.875h-4c-0.553,0-1-0.447-1-1V38h-1c0.553,0,1,0.447,1,1v11
+	c0,0.553-0.447,1-1,1H20z M44,46v-3H24v3H44z M19,39c0-0.553,0.447-1,1-1h-1V39z M50,28v-1h-1v1H50z"/>
+<path opacity="0.3" enable-background="new    " d="M54,24H14c-1.515,0-2,0.488-2,2v19c0,1.514,0.485,1.875,2,1.875h4V38h32v8.875h4
+	c1.512,0,2-0.361,2-1.875V26C56,24.489,55.512,24,54,24z M51,30h-3v-3h3V30z M47.75,7h-27.5v15h27.5V7z M20,51h28V40H20V51z M23,43
+	h22v5H23V43z"/>
+<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="171.4805" y1="-253.0195" x2="171.4805" y2="-209.0195" gradientTransform="matrix(1 0 0 -1 -137.48 -203.0195)">
+	<stop  offset="0" style="stop-color:#D0CBC5"/>
+	<stop  offset="0.5031" style="stop-color:#FAFCEF"/>
+	<stop  offset="0.9693" style="stop-color:#FFFFFF"/>
+</linearGradient>
+<path fill="url(#SVGID_1_)" d="M54,23H14c-1.515,0-2,0.488-2,2v19c0,1.514,0.485,1.875,2,1.875h4V37h32v8.875h4
+	c1.512,0,2-0.361,2-1.875V25C56,23.489,55.512,23,54,23z M51,29h-3v-3h3V29z M47.75,6h-27.5v15h27.5V6z M20,50h28V39H20V50z M23,42
+	h22v5H23V42z"/>
+<path fill="#FFFFFF" d="M20,40h28v-1H20V40z M47.75,6h-27.5v1h27.5V6z M23,48h22v-1H23V48z M54,23H14c-1.515,0-2,0.488-2,2v1
+	c0-1.512,0.485-2,2-2h40c1.512,0,2,0.488,2,2v-1C56,23.489,55.512,23,54,23z M48,30h3v-1h-3V30z"/>
+</svg>

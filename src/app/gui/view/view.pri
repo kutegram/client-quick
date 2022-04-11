@@ -5,7 +5,8 @@ SIMULATOR_QML_FILES += \
     view/skin/layout/IntroPage.qml \
     view/skin/layout/PhonePage.qml \
     view/skin/layout/CodePage.qml \
-    view/skin/layout/DialogsPage.qml
+    view/skin/layout/DialogsPage.qml \
+    view/skin/layout/HistoryPage.qml
 
 OTHER_FILES += $$SIMULATOR_QML_FILES $$SIMULATOR_QML_IMAGES
 

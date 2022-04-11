@@ -1,6 +1,7 @@
 #include "dialogslistmodel.h"
 
 #include <QMutexLocker>
+#include <QtEndian>
 #include "telegramclient.h"
 #include "tlschema.h"
 
@@ -9,6 +10,7 @@ using namespace TLType;
 DialogsListModel::DialogsListModel(QObject *parent) :
     QAbstractListModel(parent),
     _list(),
+    _items(),
     _messages(),
     _chats(),
     _users(),
@@ -22,32 +24,43 @@ DialogsListModel::DialogsListModel(QObject *parent) :
     _offsetPeer()
 {
     QHash<int, QByteArray> roles;
+    roles[DialogIdRole] = "dialogId";
     roles[TitleRole] = "title";
     roles[AvatarRole] = "avatar";
     roles[MessageRole] = "message";
-    roles[MessageTimeRole] = "messageTime";
+    roles[TimestampRole] = "timestamp";
     roles[UnreadCountRole] = "unreadCount";
     setRoleNames(roles);
 }
 
-int DialogsListModel::rowCount(const QModelIndex & parent) const {
+QByteArray getKey(TObject peer)
+{
+    QByteArray idArray(sizeof(qint64) + sizeof(qint32), 0);
+    qToLittleEndian(getPeerId(peer).toLongLong(), (uchar*) idArray.data());
+    qToLittleEndian(ID(peer), (uchar*) idArray.data() + sizeof(qint64));
+    return idArray;
+}
+
+int DialogsListModel::rowCount(const QModelIndex &parent) const {
     return _list.count();
 }
 
-QVariant DialogsListModel::data(const QModelIndex & index, int role) const {
+QVariant DialogsListModel::data(const QModelIndex &index, int role) const {
     if (!index.isValid() || index.row() < 0 || index.row() > _list.count())
         return QVariant();
 
-    TObject item = _list[index.row()];
+    TObject item = _items[_list[index.row()]];
     switch (role) {
+    case DialogIdRole:
+        return item["dialogId"];
     case TitleRole:
         return item["title"];
     case AvatarRole:
         return item["avatar"];
     case MessageRole:
         return item["message"];
-    case MessageTimeRole:
-        return item["messageTime"];
+    case TimestampRole:
+        return item["timestamp"];
     case UnreadCountRole:
         return item["unreadCount"];
     }
@@ -64,7 +77,7 @@ bool DialogsListModel::canFetchMore(const QModelIndex &parent) const
 void DialogsListModel::fetchMore(const QModelIndex &parent)
 {
     QMutexLocker locker(&_mutex);
-    if (!_client || _gotFull || _lastRequestId) return;
+    if (!canFetchMore(parent)) return;
 
     _lastRequestId = _client->getDialogs(_offsetDate, _offsetId, _offsetPeer, 20);
 }
@@ -83,6 +96,7 @@ void DialogsListModel::setClient(TelegramClient *client)
         disconnect(_client, 0, this, 0);
 
     _list.clear();
+    _items.clear();
     _messages.clear();
     _chats.clear();
     _users.clear();
@@ -156,7 +170,9 @@ void DialogsListModel::client_gotDialogs(qint64 mtm, qint32 count, TVector d, TV
                 }
             }
 
-            _list.append(prepareListItem(item));
+            QByteArray key = getKey(item["peer"].toMap());
+            _items.insert(key, prepareListItem(item));
+            _list.append(key);
         }
 
         endInsertRows();
@@ -165,36 +181,32 @@ void DialogsListModel::client_gotDialogs(qint64 mtm, qint32 count, TVector d, TV
 
 TObject DialogsListModel::prepareListItem(TObject d)
 {
+    //TODO: prepare all data
     TObject item;
 
-    //TODO: prepare all data
-    QString title;
     TObject peer = d["peer"].toMap();
     qint64 pid = getPeerId(peer).toLongLong();
-
     switch (ID(peer)) {
     case PeerChat:
     case PeerChannel:
-        title = _chats[pid]["title"].toString();
+        item["title"] = _chats[pid]["title"].toString();
+        item["dialogId"] = tlSerialize<&writeTLInputPeer>(getInputPeer(_chats[pid]));
         break;
     case PeerUser:
-        title = _users[pid]["first_name"].toString() + " " + _users[pid]["last_name"].toString();
+        item["title"] = _users[pid]["first_name"].toString() + " " + _users[pid]["last_name"].toString();
+        item["dialogId"] = tlSerialize<&writeTLInputPeer>(getInputPeer(_users[pid]));
         break;
     }
-    item["title"] = title;
 
-    QString message;
     TObject m = _messages[d["top_message"].toInt()];
-
     if (!m["message"].toString().isEmpty())
-        message = m["message"].toString();
+        item["message"] = m["message"].toString().replace('\n', ' ');
     else if (GETID(m["action"].toMap()))
-        message = m["action"].toString();
+        item["message"] = m["action"].toString();
     else if (GETID(m["media"].toMap()))
-        message = m["media"].toString();
+        item["message"] = m["media"].toString();
     else
-        message = QVariant(m).toString();
-    item["message"] = message;
+        item["message"] = QVariant(m).toString();
 
     return item;
 }

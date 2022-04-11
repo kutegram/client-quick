@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 15.0.2, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="67px"
+	 height="57px" viewBox="0 0 67 57" enable-background="new 0 0 67 57" xml:space="preserve">
+<g id="DO_NOT_EDIT_-_BOUNDING_BOX">
+	<rect id="BOUNDING_BOX" fill="none" width="67" height="57"/>
+</g>
+<g id="PLACE_YOUR_GRAPHIC_HERE">
+	<path opacity="0.3" d="M52.001,7H15c-0.55,0-1,0.45-1,1v5c0,0.55,0.45,1,1,1h37c0.55,0,1-0.45,1-1V8C53.001,7.45,52.551,7,52.001,7
+		z M38.999,18c0-0.55-0.45-1-1-1H29c-0.55,0-1,0.45-1,1v12h-6.881l6.192,10.834L33.5,51.667l6.191-10.833L45.882,30h-6.883V18z"/>
+	<path opacity="0.15" d="M33.5,51.667c-0.359,0-0.69-0.192-0.868-0.504L20.251,29.496c-0.177-0.31-0.176-0.689,0.003-0.998
+		C20.433,28.19,20.763,28,21.119,28H27V17c0-1.103,0.897-2,2-2h8.999c1.103,0,2,0.897,2,2v11h5.883c0.356,0,0.686,0.19,0.865,0.498
+		c0.179,0.308,0.18,0.688,0.003,0.998L34.368,51.163C34.19,51.475,33.859,51.667,33.5,51.667L33.5,51.667z M15,14
+		c-1.103,0-2-0.897-2-2V7c0-1.103,0.897-2,2-2h37c1.103,0,2,0.897,2,2v5c0,1.103-0.897,2-2,2H15z"/>
+	<path opacity="0.15" d="M52.001,6H15c-0.55,0-1,0.45-1,1v5c0,0.55,0.45,1,1,1h37c0.55,0,1-0.45,1-1V7
+		C53.001,6.45,52.551,6,52.001,6z M38.999,17c0-0.55-0.45-1-1-1H29c-0.55,0-1,0.45-1,1v12h-6.881l6.192,10.834L33.5,50.667
+		l6.191-10.833L45.882,29h-6.883V17z"/>
+	<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="33.501" y1="50.667" x2="33.501" y2="6.0005">
+		<stop  offset="0" style="stop-color:#D0CBC5"/>
+		<stop  offset="0.5031" style="stop-color:#FAFCEF"/>
+		<stop  offset="0.9693" style="stop-color:#FFFFFF"/>
+	</linearGradient>
+	<path fill="url(#SVGID_1_)" d="M52.001,6H15c-0.55,0-1,0.45-1,1v5c0,0.55,0.45,1,1,1h37c0.55,0,1-0.45,1-1V7
+		C53.001,6.45,52.551,6,52.001,6z M38.999,17c0-0.55-0.45-1-1-1H29c-0.55,0-1,0.45-1,1v12h-6.881l6.192,10.834L33.5,50.667
+		l6.191-10.833L45.882,29h-6.883V17z"/>
+	<path fill="#FFFFFF" d="M21.691,30H28v-1h-6.881L21.691,30z M52.001,6H15c-0.55,0-1,0.45-1,1v1c0-0.55,0.45-1,1-1h37
+		c0.55,0,1,0.45,1,1V7C53.001,6.45,52.551,6,52.001,6z M38.999,17c0-0.55-0.45-1-1-1H29c-0.55,0-1,0.45-1,1v1c0-0.55,0.45-1,1-1
+		h8.999c0.55,0,1,0.45,1,1V17z M38.999,30h6.312l0.571-1h-6.883V30z"/>
+</g>
+<g id="DO_NOT_EDIT_-_FOCAL_ZONE_GUIDES">
+</g>
+</svg>

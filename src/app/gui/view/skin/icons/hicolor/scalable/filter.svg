@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 15.0.2, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="67px"
+	 height="57px" viewBox="0 0 67 57" enable-background="new 0 0 67 57" xml:space="preserve">
+<g id="DO_NOT_EDIT_-_BOUNDING_BOX">
+	<rect id="BOUNDING_BOX" fill="none" width="67" height="57"/>
+</g>
+<g id="PLACE_YOUR_GRAPHIC_HERE">
+	<path opacity="0.3" d="M55.964,9.555H11.037c-0.57,0-0.709,0.33-0.304,0.735L29.5,31.5v14l8,3.945V31.5l18.768-21.21
+		C56.673,9.884,56.533,9.555,55.964,9.555z"/>
+	<path opacity="0.15" d="M37.5,49.445c-0.151,0-0.303-0.034-0.442-0.104l-8-3.945C28.716,45.229,28.5,44.881,28.5,44.5V30.879
+		L9.983,9.952C9.325,9.296,9.491,8.638,9.595,8.388c0.104-0.25,0.452-0.833,1.442-0.833h44.927c0.989,0,1.338,0.583,1.441,0.833
+		s0.27,0.909-0.431,1.609L38.5,30.879v17.566c0,0.346-0.179,0.667-0.472,0.85C37.867,49.395,37.684,49.445,37.5,49.445z"/>
+	<path opacity="0.15" d="M55.964,8.555H11.037c-0.57,0-0.709,0.33-0.304,0.735L29.5,30.5v14l8,3.945V30.5L56.268,9.29
+		C56.673,8.884,56.533,8.555,55.964,8.555z"/>
+	<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="33.5005" y1="48.4453" x2="33.5005" y2="8.5552">
+		<stop  offset="0" style="stop-color:#D0CBC5"/>
+		<stop  offset="0.5031" style="stop-color:#FAFCEF"/>
+		<stop  offset="0.9693" style="stop-color:#FFFFFF"/>
+	</linearGradient>
+	<path fill="url(#SVGID_1_)" d="M55.964,8.555H11.037c-0.57,0-0.709,0.33-0.304,0.735L29.5,30.5v14l8,3.945V30.5L56.268,9.29
+		C56.673,8.884,56.533,8.555,55.964,8.555z"/>
+	<path fill="#FFFFFF" d="M10.976,9.565c0.023-0.001,0.036-0.01,0.061-0.01h44.927c0.024,0,0.037,0.009,0.061,0.01l0.243-0.275
+		c0.405-0.405,0.266-0.735-0.304-0.735H11.037c-0.57,0-0.709,0.33-0.304,0.735L10.976,9.565z"/>
+</g>
+<g id="DO_NOT_EDIT_-_FOCAL_ZONE_GUIDES">
+</g>
+</svg>

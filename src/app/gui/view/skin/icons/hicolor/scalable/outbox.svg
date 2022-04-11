@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 14.0.0, SVG Export Plug-In  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" [
+	<!ENTITY ns_flows "http://ns.adobe.com/Flows/1.0/">
+]>
+<svg version="1.1"
+	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/"
+	 x="0px" y="0px" width="67px" height="57px" viewBox="0 0 67 57" enable-background="new 0 0 67 57" xml:space="preserve">
+<defs>
+</defs>
+<rect fill="none" width="67" height="57"/>
+<path opacity="0.15" d="M14,52c-1.654,0-3-1.346-3-3v-9c0-1.654,1.346-3,3-3h3c1.654,0,3,1.346,3,3v3h26v-3c0-1.654,1.346-3,3-3h3
+	c1.654,0,3,1.346,3,3v9c0,1.654-1.346,3-3,3H14z M29,41c-0.953,0-2-1.047-2-2V25h-6c-0.374,0-0.716-0.208-0.888-0.54
+	c-0.172-0.331-0.145-0.731,0.07-1.036l12-17C32.37,6.158,32.675,6,33,6s0.63,0.158,0.817,0.423l12,17
+	c0.215,0.305,0.242,0.705,0.07,1.036C45.716,24.792,45.374,25,45,25h-6v14c0,0.953-1.047,2-2,2H29z"/>
+<path opacity="0.3" d="M28,40c0,0.398,0.601,1,1,1h8c0.4,0,1-0.602,1-1V25h7L33,8L21,25h7V40z M52,39h-3c-1.104,0-2,0.896-2,2v4H19
+	v-4c0-1.104-0.896-2-2-2h-3c-1.104,0-2,0.896-2,2v9c0,1.104,0.896,2,2,2h38c1.104,0,2-0.896,2-2v-9C54,39.896,53.104,39,52,39z"/>
+<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="33.0005" y1="51" x2="33.0005" y2="7.0005">
+	<stop  offset="0" style="stop-color:#D0CBC5"/>
+	<stop  offset="0.5031" style="stop-color:#FAFCEF"/>
+	<stop  offset="0.9693" style="stop-color:#FFFFFF"/>
+</linearGradient>
+<path fill="url(#SVGID_1_)" d="M28,39c0,0.398,0.601,1,1,1h8c0.4,0,1-0.602,1-1V24h7L33,7L21,24h7V39z M52,38h-3
+	c-1.104,0-2,0.896-2,2v4H19v-4c0-1.104-0.896-2-2-2h-3c-1.104,0-2,0.896-2,2v9c0,1.104,0.896,2,2,2h38c1.104,0,2-0.896,2-2v-9
+	C54,38.896,53.104,38,52,38z"/>
+<path fill="#FFFFFF" d="M33,8l11.294,16H45L33,7L21,24h0.706L33,8z M19,40c0-1.104-0.896-2-2-2h-3c-1.104,0-2,0.896-2,2v1
+	c0-1.104,0.896-2,2-2h3c1.104,0,2,0.896,2,2V40z M52,38h-3c-1.104,0-2,0.896-2,2v1c0-1.104,0.896-2,2-2h3c1.104,0,2,0.896,2,2v-1
+	C54,38.896,53.104,38,52,38z M19,45h28v-1H19V45z"/>
+</svg>

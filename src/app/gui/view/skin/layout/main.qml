@@ -3,6 +3,7 @@ import com.nokia.symbian 1.0
 import ru.curoviyxru.kutegram 1.0
 
 ApplicationWindow {
+    //TODO: fix ToolBar hiding bug
     id: root
 
     TelegramClient {
@@ -19,15 +20,18 @@ ApplicationWindow {
         onStateChanged: {
             switch (state) {
             case TelegramClient.INITED:
-                if (pageStack.depth == 1 && !telegram.isLoggedIn()) pageStack.push(phonePage);
+                //TODO: do not allow to push twice
+                if (!telegram.isLoggedIn()) pageStack.push(phonePage);
                 break;
             case TelegramClient.LOGGED_IN:
-                pageStack.push(dialogsPage); //TODO: do not allow to push dialogsPage twice
+                //TODO: do not allow to push twice
+                pageStack.push(dialogsPage);
                 break;
             }
         }
         onGotSentCode: {
-            if (pageStack.depth == 2 && !telegram.isLoggedIn()) pageStack.push(codePage);
+            //TODO: do not allow to push twice
+            if (!telegram.isLoggedIn()) pageStack.push(codePage);
         }
     }
 
