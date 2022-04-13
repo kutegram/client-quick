@@ -7,7 +7,6 @@ Page {
 
     id: root
 
-    //TODO: get scrolling behavior from legacy KG
     ListView {
         id: dialogsView
         anchors { left: parent.left; right: parent.right; top: parent.top; bottom: messageField.top; }
@@ -18,6 +17,31 @@ Page {
         model: HistoryListModel {
             id: dataModel
             client: telegram
+
+            property int lastSize: 0
+
+            onLoadingMessages: {
+                dialogsView.interactive = false;
+                dialogsView.positionViewAtIndex(0, ListView.Beginning);
+            }
+
+            onLoadedMessages: {
+                dialogsView.positionViewAtIndex(Math.min(dialogsView.count - lastSize, dialogsView.count - 1), ListView.Beginning);
+                dialogsView.interactive = true;
+                lastSize = dialogsView.count;
+            }
+
+            property bool atYEnd: false
+
+            onAddingMessage: {
+                atYEnd = dialogsView.atYEnd;
+            }
+
+            onAddedMessage: {
+                if (atYEnd)
+                    dialogsView.positionViewAtIndex(dialogsView.count - 1, ListView.End);
+                atYEnd = false;
+            }
         }
 
         //TODO: delegate

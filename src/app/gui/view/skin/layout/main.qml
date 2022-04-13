@@ -20,18 +20,18 @@ ApplicationWindow {
         onStateChanged: {
             switch (state) {
             case TelegramClient.INITED:
-                //TODO: do not allow to push twice
-                if (!telegram.isLoggedIn()) pageStack.push(phonePage);
+                if (pageStack.depth == 1 && !telegram.isLoggedIn())
+                    pageStack.push(phonePage);
                 break;
             case TelegramClient.LOGGED_IN:
-                //TODO: do not allow to push twice
-                pageStack.push(dialogsPage);
+                if (pageStack.depth == 0 || pageStack.depth == 3)
+                    pageStack.push(dialogsPage);
                 break;
             }
         }
         onGotSentCode: {
-            //TODO: do not allow to push twice
-            if (!telegram.isLoggedIn()) pageStack.push(codePage);
+            if (pageStack.depth == 2 && !telegram.isLoggedIn())
+                pageStack.push(codePage);
         }
     }
 

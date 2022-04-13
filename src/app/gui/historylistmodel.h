@@ -41,6 +41,11 @@ public:
 
     void gotHistoryMessages(qint64 mtm, qint32 count, TVector m, TVector c, TVector u, qint32 offsetIdOffset, qint32 nextRate, bool inexact);
     void gotReplyMessages(qint64 mtm, qint32 count, TVector m, TVector c, TVector u, qint32 offsetIdOffset, qint32 nextRate, bool inexact);
+signals:
+    void loadingMessages();
+    void loadedMessages();
+    void addingMessage();
+    void addedMessage();
 public slots:
     void tryLoadUpwards();
     void client_gotMessages(qint64 mtm, qint32 count, TVector m, TVector c, TVector u, qint32 offsetIdOffset, qint32 nextRate, bool inexact);

@@ -187,6 +187,7 @@ void HistoryListModel::gotHistoryMessages(qint64 mtm, qint32 count, TVector m, T
 
     TVector requiredReplies;
     if (!m.isEmpty()) {
+        emit loadingMessages();
         beginInsertRows(QModelIndex(), 0, m.size() - 1);
 
         for (qint32 i = 0; i < m.size(); ++i) {
@@ -210,6 +211,7 @@ void HistoryListModel::gotHistoryMessages(qint64 mtm, qint32 count, TVector m, T
         }
 
         endInsertRows();
+        emit loadedMessages();
     }
 
     if (!requiredReplies.isEmpty() && _client)
@@ -256,12 +258,14 @@ void HistoryListModel::client_updateNewMessage(TObject msg, qint32 pts, qint32 p
     qint32 msgId = msg["id"].toInt();
     _messages.insert(msgId, msg);
 
+    emit addingMessage();
     beginInsertRows(QModelIndex(), _list.size(), _list.size());
 
     _items.insert(msgId, prepareListItem(msg));
     _list.append(msgId);
 
     endInsertRows();
+    emit addedMessage();
 }
 
 void HistoryListModel::client_updateEditMessage(TObject msg, qint32 pts, qint32 pts_count)
