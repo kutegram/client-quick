@@ -30,8 +30,8 @@ public:
     int rowCount(const QModelIndex &parent = QModelIndex()) const;
     QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const;
 
-    bool canFetchMore(const QModelIndex &parent) const;
-    void fetchMore(const QModelIndex &parent);
+    bool canFetchMoreUpwards(const QModelIndex &parent) const;
+    void fetchMoreUpwards(const QModelIndex &parent);
 
     TelegramClient* client() const;
     void setClient(TelegramClient* client);
@@ -42,7 +42,7 @@ public:
     void gotHistoryMessages(qint64 mtm, qint32 count, TVector m, TVector c, TVector u, qint32 offsetIdOffset, qint32 nextRate, bool inexact);
     void gotReplyMessages(qint64 mtm, qint32 count, TVector m, TVector c, TVector u, qint32 offsetIdOffset, qint32 nextRate, bool inexact);
 public slots:
-    void tryLoad();
+    void tryLoadUpwards();
     void client_gotMessages(qint64 mtm, qint32 count, TVector m, TVector c, TVector u, qint32 offsetIdOffset, qint32 nextRate, bool inexact);
     void client_updateNewMessage(TObject message, qint32 pts, qint32 pts_count);
     void client_updateEditMessage(TObject message, qint32 pts, qint32 pts_count);

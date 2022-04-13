@@ -68,17 +68,17 @@ QVariant HistoryListModel::data(const QModelIndex &index, int role) const
     return QVariant();
 }
 
-bool HistoryListModel::canFetchMore(const QModelIndex &parent) const
+bool HistoryListModel::canFetchMoreUpwards(const QModelIndex &parent) const
 {
     return _client && ID(_peer) && !_gotFull && !_lastRequestId && !_replyRequestId && _client->apiReady();
 }
 
-void HistoryListModel::fetchMore(const QModelIndex &parent)
+void HistoryListModel::fetchMoreUpwards(const QModelIndex &parent)
 {
     QMutexLocker locker(&_mutex);
-    if (!canFetchMore(parent)) return;
+    if (!canFetchMoreUpwards(parent)) return;
 
-    _lastRequestId = _client->getHistory(_peer, _offsetId, _offsetDate, 0, 20);
+    _lastRequestId = _client->getHistory(_peer, _offsetId, _offsetDate, 0, 40);
 }
 
 TelegramClient* HistoryListModel::client() const
@@ -113,7 +113,7 @@ void HistoryListModel::setClient(TelegramClient *client)
     connect(_client, SIGNAL(updateDeleteMessages(TVector,qint32,qint32)), this, SLOT(client_updateDeleteMessages(TVector,qint32,qint32)));
 
     endResetModel();
-    //tryLoad();
+    //tryLoadUpwards();
 }
 
 QByteArray HistoryListModel::peer() const
@@ -141,12 +141,12 @@ void HistoryListModel::setPeer(QByteArray peer)
     _peer = tlDeserialize<&readTLInputPeer>(peer).toMap();
 
     endResetModel();
-    //tryLoad();
+    //tryLoadUpwards();
 }
 
-void HistoryListModel::tryLoad()
+void HistoryListModel::tryLoadUpwards()
 {
-    if (canFetchMore(QModelIndex())) fetchMore(QModelIndex());
+    if (canFetchMoreUpwards(QModelIndex())) fetchMoreUpwards(QModelIndex());
 }
 
 void HistoryListModel::client_gotMessages(qint64 mtm, qint32 count, TVector m, TVector c, TVector u, qint32 offsetIdOffset, qint32 nextRate, bool inexact)
@@ -187,7 +187,7 @@ void HistoryListModel::gotHistoryMessages(qint64 mtm, qint32 count, TVector m, T
 
     TVector requiredReplies;
     if (!m.isEmpty()) {
-        beginInsertRows(QModelIndex(), _list.size(), _list.size() + m.size() - 1);
+        beginInsertRows(QModelIndex(), 0, m.size() - 1);
 
         for (qint32 i = 0; i < m.size(); ++i) {
             TObject item = m[i].toMap();
@@ -201,18 +201,18 @@ void HistoryListModel::gotHistoryMessages(qint64 mtm, qint32 count, TVector m, T
 
             qint32 replyToId = item["reply_to"].toMap()["reply_to_msg_id"].toInt();
             if (ID(item["reply_to"].toMap()) && !ID(_messages[replyToId])) {
-                requiredReplies.append(item["reply_to"].toMap());
+                requiredReplies.append(getInputMessage(item["reply_to"].toMap()));
                 _replies.insert(replyToId, msgId);
             }
 
             _items.insert(msgId, prepareListItem(item));
-            _list.insert(1, msgId);
+            _list.insert(0, msgId);
         }
 
         endInsertRows();
     }
 
-    if (!requiredReplies.isEmpty() && _client && ID(_peer))
+    if (!requiredReplies.isEmpty() && _client)
         _replyRequestId = _client->getMessages(requiredReplies);
 }
 

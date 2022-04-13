@@ -10,12 +10,12 @@ Page {
         anchors { left: parent.left; right: parent.right; top: parent.top }
         height: tabBar.height
         contentHeight: tabBar.height
-        contentWidth: tabBar.width
+        contentWidth: tabBar.fullWidth
         flickableDirection: Flickable.HorizontalFlick
         boundsBehavior: Flickable.StopAtBounds
         TabBarLayout {
             id: tabBar
-            anchors { left: parent.left; top: parent.top }
+            anchors { left: parent.left; top: parent.top; }
             TabButton { text: "All chats"; checked: true }
             TabButton { text: "All chats"; }
             TabButton { text: "All chats"; }
@@ -61,12 +61,6 @@ Page {
 
             onClicked: {
                 pageStack.push(historyPage);
-            }
-        }
-
-        onMovementEnded: {
-            if (dialogsView.atYEnd) {
-                dataModel.tryLoad();
             }
         }
 

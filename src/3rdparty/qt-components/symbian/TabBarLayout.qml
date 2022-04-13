@@ -49,6 +49,9 @@ ImplicitSizeItem {
     onWidthChanged: priv.layoutChidren()
     onHeightChanged: priv.layoutChidren()
 
+    implicitWidth: screen.width
+    property int fullWidth: 0
+
     Keys.onPressed: {
         if (event.key == Qt.Key_Right) {
             var oldIndex = priv.currentButtonIndex()
@@ -104,7 +107,7 @@ ImplicitSizeItem {
                     }
                 }
             }
-            root.implicitWidth = contentWidth
+            root.fullWidth = contentWidth
             root.implicitHeight = contentHeight
         }
     }

@@ -79,7 +79,7 @@ void DialogsListModel::fetchMore(const QModelIndex &parent)
     QMutexLocker locker(&_mutex);
     if (!canFetchMore(parent)) return;
 
-    _lastRequestId = _client->getDialogs(_offsetDate, _offsetId, _offsetPeer, 20);
+    _lastRequestId = _client->getDialogs(_offsetDate, _offsetId, _offsetPeer, 40);
 }
 
 TelegramClient* DialogsListModel::client() const
@@ -128,7 +128,7 @@ void DialogsListModel::client_gotDialogs(qint64 mtm, qint32 count, TVector d, TV
     _lastRequestId = 0;
 
     if (!count) _gotFull = true;
-    else _gotFull |= d.isEmpty(); //TODO: (d.size() != 20);
+    else _gotFull |= d.isEmpty();
 
     for (qint32 i = 0; i < m.size(); ++i) {
         TObject item = m[i].toMap();

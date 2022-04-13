@@ -40,8 +40,8 @@ Page {
         }
 
         onMovementEnded: {
-            if (dialogsView.atYEnd) {
-                dataModel.tryLoad();
+            if (dialogsView.atYBeginning) {
+                dataModel.tryLoadUpwards();
             }
         }
 
@@ -107,7 +107,7 @@ Page {
 
     onStatusChanged: {
         if (status == PageStatus.Active) {
-            dataModel.tryLoad();
+            dataModel.tryLoadUpwards();
         }
     }
 }
