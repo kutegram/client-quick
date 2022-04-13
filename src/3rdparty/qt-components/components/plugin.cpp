@@ -57,4 +57,4 @@ public:
 
 #include "plugin.moc"
 
-Q_EXPORT_PLUGIN2(futubra_qt_component_plugin_1_0, QtComponentsPlugin);
+Q_EXPORT_PLUGIN2(qt_component_plugin_1_0, QtComponentsPlugin);

@@ -156,4 +156,4 @@ private:
 
 #include "plugin.moc"
 
-Q_EXPORT_PLUGIN2(futubra_symbian_plugin_1_0, SymbianPlugin)
+Q_EXPORT_PLUGIN2(symbian_plugin_1_0, SymbianPlugin)
