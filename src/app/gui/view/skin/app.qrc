@@ -7,10 +7,13 @@
         <file alias="DialogsPage.qml">layout/DialogsPage.qml</file>
         <file alias="HistoryPage.qml">layout/HistoryPage.qml</file>
     </qresource>
-    <qresource prefix="/images">
-        <file alias="logo.png">images/logo.png</file>
-    </qresource>
     <qresource prefix="/icons">
         <file alias="create_message.svg">icons/hicolor/scalable/toolbar/create_message.svg</file>
+    </qresource>
+    <qresource prefix="/images">
+        <file alias="code.png">images/code.png</file>
+        <file alias="intro.png">images/intro.png</file>
+        <file alias="logo.png">images/logo.png</file>
+        <file alias="phone.png">images/phone.png</file>
     </qresource>
 </RCC>
