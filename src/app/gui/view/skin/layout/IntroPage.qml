@@ -45,7 +45,7 @@ Page {
                 role: "SubTitle"
                 elide: Text.ElideNone
                 wrapMode: Text.Wrap
-                text: "unofficial client for Telegram messenger"
+                text: "Unofficial client for Telegram messenger"
             }
         }
     }

@@ -6,7 +6,7 @@
 #include <QtCore/QScopedPointer>
 #include <QtDeclarative/QDeclarativeView>
 
-namespace demo { namespace gui {
+namespace gui {
 
 class Application : public QApplication
 {
@@ -21,6 +21,6 @@ private:
 	QSplashScreen *buildSplashScreen();
 };
 
-}}
+}
 
 #endif

@@ -6,7 +6,7 @@
 #include "historylistmodel.h"
 
 Q_DECL_EXPORT int main(int argc, char *argv[]) {
-    demo::gui::Application app(argc, argv);
+    gui::Application app(argc, argv);
 
     qmlRegisterType<TelegramClient>("ru.curoviyxru.kutegram", 1, 0, "TelegramClient");
     qmlRegisterType<DialogsListModel>("ru.curoviyxru.kutegram", 1, 0, "DialogsListModel");

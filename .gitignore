@@ -17,3 +17,4 @@ qrc_app.cpp
 *.pkg
 *.cache
 qrc_symbian.cpp
+*.sis
