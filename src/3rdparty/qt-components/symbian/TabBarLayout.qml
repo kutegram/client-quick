@@ -85,17 +85,21 @@ ImplicitSizeItem {
             var childCount = root.children.length
             var contentWidth = 0
             var contentHeight = 0
+            var currentX = 0
             if (childCount != 0) {
                 var itemWidth = root.width / childCount
                 for (var i = 0; i < childCount; ++i) {
                     var child = root.children[i]
-                    child.x = i * itemWidth
+                    child.x = currentX
                     child.y = 0
-                    child.width = itemWidth
+                    if (child.implicitWidth != undefined)
+                        child.width = Math.max(child.implicitWidth, itemWidth)
+                    else child.width = itemWidth
                     child.height = root.height
+                    currentX += child.width
 
                     if (child.implicitWidth != undefined) {
-                        contentWidth = Math.max(contentWidth, child.implicitWidth * childCount)
+                        contentWidth = Math.max(contentWidth, currentX)
                         contentHeight = Math.max(contentHeight, child.implicitHeight)
                     }
                 }

@@ -76,30 +76,30 @@ Page {
             flat: true
             iconSource: "toolbar-menu"
             onClicked: {
-                contextMenu.open();
+                optionsMenu.open();
             }
-        }
-    }
 
-    ContextMenu {
-        id: contextMenu
-        MenuLayout {
-            MenuItem {
-                text: "Test option"
-                onClicked: {
+            Menu {
+                id: optionsMenu
+                content: MenuLayout {
+                    MenuItem {
+                        text: "Test option"
+                        onClicked: {
 
-                }
-            }
-            MenuItem {
-                text: "Test option"
-                onClicked: {
+                        }
+                    }
+                    MenuItem {
+                        text: "Test option"
+                        onClicked: {
 
-                }
-            }
-            MenuItem {
-                text: "Test option"
-                onClicked: {
+                        }
+                    }
+                    MenuItem {
+                        text: "Test option"
+                        onClicked: {
 
+                        }
+                    }
                 }
             }
         }

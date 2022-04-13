@@ -5,15 +5,29 @@ import ru.curoviyxru.kutegram 1.0
 Page {
     id: root
 
-    TabBarLayout {
-        id: tabBarLayout
+    Flickable {
+        id: tabBarFlickable
         anchors { left: parent.left; right: parent.right; top: parent.top }
-        TabButton { text: "All chats"; checked: true; }
+        height: tabBar.height
+        contentHeight: tabBar.height
+        contentWidth: tabBar.width
+        flickableDirection: Flickable.HorizontalFlick
+        boundsBehavior: Flickable.StopAtBounds
+        TabBarLayout {
+            id: tabBar
+            anchors { left: parent.left; top: parent.top }
+            TabButton { text: "All chats"; checked: true }
+            TabButton { text: "All chats"; }
+            TabButton { text: "All chats"; }
+            TabButton { text: "All chats"; }
+            TabButton { text: "All chats"; }
+            TabButton { text: "All chats"; }
+        }
     }
 
     ListView {
         id: dialogsView
-        anchors { left: parent.left; right: parent.right; top: tabBarLayout.bottom; bottom: parent.bottom }
+        anchors { left: parent.left; right: parent.right; top: tabBarFlickable.bottom; bottom: parent.bottom }
         cacheBuffer: height
         clip: true
         focus: true

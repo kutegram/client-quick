@@ -71,6 +71,11 @@ ImplicitSizeItem {
             privateStyle.play(Symbian.BasicButton)
             if (internal.tabGroup)
                 internal.tabGroup.currentTab = tab
+            else {
+                for (var i = 0; i < parent.children.length; i++)
+                    parent.children[i].checked = false;
+                checked = true;
+            }
         }
 
         function isButtonRow(item) {
