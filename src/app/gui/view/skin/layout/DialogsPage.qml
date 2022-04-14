@@ -5,29 +5,36 @@ import ru.curoviyxru.kutegram 1.0
 Page {
     id: root
 
-    Flickable {
-        id: tabBarFlickable
-        anchors { left: parent.left; right: parent.right; top: parent.top }
-        height: tabBar.height
-        contentHeight: tabBar.height
-        contentWidth: tabBar.fullWidth
-        flickableDirection: Flickable.HorizontalFlick
-        boundsBehavior: Flickable.StopAtBounds
-        TabBarLayout {
-            id: tabBar
-            anchors { left: parent.left; top: parent.top; }
-            TabButton { text: "All chats"; checked: true }
-            TabButton { text: "All chats"; }
-            TabButton { text: "All chats"; }
-            TabButton { text: "All chats"; }
-            TabButton { text: "All chats"; }
-            TabButton { text: "All chats"; }
-        }
-    }
+    //TODO: dialog filters
+//    Flickable {
+//        id: tabBarFlickable
+//        anchors { left: parent.left; right: parent.right; top: parent.top }
+//        height: tabBar.height
+//        contentHeight: tabBar.height
+//        contentWidth: tabBar.fullWidth
+//        flickableDirection: Flickable.HorizontalFlick
+//        boundsBehavior: Flickable.StopAtBounds
+//        TabBarLayout {
+//            id: tabBar
+//            anchors { left: parent.left; top: parent.top; }
+//            TabButton { text: "All chats"; checked: true }
+//            TabButton { text: "All chats"; }
+//            TabButton { text: "All chats"; }
+//            TabButton { text: "All chats"; }
+//            TabButton { text: "All chats"; }
+//            TabButton { text: "All chats"; }
+//        }
+//    }
 
     ListView {
         id: dialogsView
-        anchors { left: parent.left; right: parent.right; top: tabBarFlickable.bottom; bottom: parent.bottom }
+        anchors {
+            left: parent.left;
+            right: parent.right;
+            //top: tabBarFlickable.bottom;
+            top: parent.top;
+            bottom: parent.bottom
+        }
         cacheBuffer: height
         clip: true
         focus: true
