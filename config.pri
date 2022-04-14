@@ -18,5 +18,5 @@ symbian {
 	isEmpty(APP_IMPORTS_BASE_DIR):   APP_IMPORTS_BASE_DIR   = $$RESOURCE_FILES_DIR/demo/imports
 	isEmpty(APP_RESOURCES_BASE_DIR): APP_RESOURCES_BASE_DIR = $$APP_RESOURCE_DIR/demo
 	
-	isEmpty(APP_CAPABILITY): APP_CAPABILITY = NetworkServices ReadUserData UserEnvironment
+    isEmpty(APP_CAPABILITY): APP_CAPABILITY = ReadUserData WriteUserData UserEnvironment NetworkServices
 }

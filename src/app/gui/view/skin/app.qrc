@@ -9,6 +9,8 @@
     </qresource>
     <qresource prefix="/icons">
         <file alias="create_message.svg">icons/hicolor/scalable/toolbar/create_message.svg</file>
+        <file alias="error.svg">icons/hicolor/scalable/error.svg</file>
+        <file alias="information_userguide.svg">icons/hicolor/scalable/information_userguide.svg</file>
     </qresource>
     <qresource prefix="/images">
         <file alias="code.png">images/code.png</file>

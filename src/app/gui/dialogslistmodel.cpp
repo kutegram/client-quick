@@ -4,6 +4,7 @@
 #include <QtEndian>
 #include "telegramclient.h"
 #include "tlschema.h"
+#include "messageutils.h"
 
 using namespace TLType;
 
@@ -179,6 +180,25 @@ void DialogsListModel::client_gotDialogs(qint64 mtm, qint32 count, TVector d, TV
     }
 }
 
+TObject DialogsListModel::getMessagePeer(TObject m)
+{
+    TObject from = m["from_id"].toMap();
+    if (!ID(from))
+        from = m["peer_id"].toMap();
+
+    switch (ID(from)) {
+    case PeerChannel:
+    case PeerChat:
+        from = _chats[getPeerId(from).toLongLong()];
+        break;
+    case PeerUser:
+        from = _users[getPeerId(from).toLongLong()];
+        break;
+    }
+
+    return from;
+}
+
 TObject DialogsListModel::prepareListItem(TObject d)
 {
     //TODO: prepare all data
@@ -193,20 +213,14 @@ TObject DialogsListModel::prepareListItem(TObject d)
         item["dialogId"] = tlSerialize<&writeTLInputPeer>(getInputPeer(_chats[pid]));
         break;
     case PeerUser:
-        item["title"] = _users[pid]["first_name"].toString() + " " + _users[pid]["last_name"].toString();
+        item["title"] = QString(_users[pid]["first_name"].toString() + " " + _users[pid]["last_name"].toString());
         item["dialogId"] = tlSerialize<&writeTLInputPeer>(getInputPeer(_users[pid]));
         break;
     }
 
     TObject m = _messages[d["top_message"].toInt()];
-    if (!m["message"].toString().isEmpty())
-        item["message"] = m["message"].toString().replace('\n', ' ');
-    else if (GETID(m["action"].toMap()))
-        item["message"] = m["action"].toString();
-    else if (GETID(m["media"].toMap()))
-        item["message"] = m["media"].toString();
-    else
-        item["message"] = QVariant(m).toString();
+    TObject mp = getMessagePeer(m);
+    item["message"] = QString(peerNameToHtml(mp, true) + " " + messageToHtml(m, true));
 
     return item;
 }

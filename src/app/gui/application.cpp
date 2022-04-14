@@ -6,6 +6,8 @@
 #include <QtDeclarative/QDeclarativeContext>
 #include <QtDeclarative/QDeclarativeComponent>
 #include "gui/application.h"
+#include "telegramclient.h"
+#include "systemhandler.h"
 
 #ifdef Q_WS_X11
 #include <QX11Info>
@@ -19,6 +21,7 @@ Application::Application(int argc, char *argv[])
 	: QApplication(argc, argv)
 {
 #ifdef QT_KEYPAD_NAVIGATION
+    //TODO: keypad UI navigation
     QApplication::setNavigationMode(Qt::NavigationModeCursorAuto);
 #endif
     QCoreApplication::setAttribute((Qt::ApplicationAttribute) 9, false);
@@ -39,6 +42,7 @@ int Application::run() {
     splashScreen->showFullScreen();
 #endif
 	QScopedPointer<QDeclarativeView> applicationWindow(buildRootView());
+
     applicationWindow->setAttribute((Qt::WidgetAttribute) 128, true);
 #ifdef Q_WS_X11
         WId id = applicationWindow->winId();
@@ -55,6 +59,7 @@ int Application::run() {
 #else
     applicationWindow->showNormal();
 #endif
+
 	return QApplication::exec();
 }
 
@@ -64,10 +69,17 @@ QDeclarativeView *Application::buildRootView() {
 	                 view.data(), SLOT(close()));
 	view->setResizeMode(QDeclarativeView::SizeRootObjectToView);
 #if defined(Q_OS_SYMBIAN)
-        view->engine()->rootContext()->setContextProperty("QTC_DISABLE_STATUS_BAR", QVariant(false));
+    view->engine()->rootContext()->setContextProperty("QTC_DISABLE_STATUS_BAR", QVariant(false));
 #else
-        view->engine()->rootContext()->setContextProperty("QTC_DISABLE_STATUS_BAR", QVariant(true));
+    view->engine()->rootContext()->setContextProperty("QTC_DISABLE_STATUS_BAR", QVariant(true));
 #endif
+
+    TelegramClient* client = new TelegramClient(this);
+    view->engine()->rootContext()->setContextProperty("telegram", client);
+
+    SystemHandler* systemHandler = new SystemHandler(client);
+    view->engine()->rootContext()->setContextProperty("systemHandler", systemHandler);
+
 	view->engine()->addImportPath(
 	    QLatin1String("../../resource/demo/imports"));
 	//view->setSource(QUrl::fromLocalFile(

@@ -18,3 +18,6 @@ qrc_app.cpp
 *.cache
 qrc_symbian.cpp
 *.sis
+*.rc
+manifest.aegis
+*.user.*

@@ -4,6 +4,7 @@
 #include "telegramclient.h"
 #include "dialogslistmodel.h"
 #include "historylistmodel.h"
+#include "systemhandler.h"
 
 Q_DECL_EXPORT int main(int argc, char *argv[]) {
     gui::Application app(argc, argv);
@@ -11,8 +12,9 @@ Q_DECL_EXPORT int main(int argc, char *argv[]) {
     qmlRegisterType<TelegramClient>("ru.curoviyxru.kutegram", 1, 0, "TelegramClient");
     qmlRegisterType<DialogsListModel>("ru.curoviyxru.kutegram", 1, 0, "DialogsListModel");
     qmlRegisterType<HistoryListModel>("ru.curoviyxru.kutegram", 1, 0, "HistoryListModel");
+    qmlRegisterType<SystemHandler>("ru.curoviyxru.kutegram", 1, 0, "SystemHandler");
 
-    QApplication::setApplicationVersion("0.1.0");
+    QApplication::setApplicationVersion(BUILD_VERSION);
     QApplication::setApplicationName("Kutegram");
     QApplication::setOrganizationName("curoviyxru");
     QApplication::setOrganizationDomain("kg.curoviyx.ru");

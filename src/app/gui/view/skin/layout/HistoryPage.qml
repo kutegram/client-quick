@@ -49,10 +49,39 @@ Page {
             anchors { left: parent.left; right: parent.right; margins: platformStyle.paddingLarge; }
             ListItemText {
                 id: titleText
-                anchors { left: parent.left; right: parent.right; }
+                anchors { left: parent.left; }
                 role: "Title"
                 text: title
             }
+
+            Repeater {
+                model: hasReply ? 1 : 0;
+                Row {
+                    anchors { left: parent.left; right: parent.right; }
+                    spacing: platformStyle.paddingSmall;
+
+                    Rectangle {
+                        id: replyRect
+                        width: platformStyle.paddingSmall;
+                        height: parent.height;
+                        color: replyColor;
+                    }
+
+                    Column {
+                        ListItemText {
+                            id: replyTitleText
+                            role: "Title"
+                            text: replyTitle
+                        }
+                        ListItemText {
+                            id: replySubtitleText
+                            role: "SubTitle"
+                            text: replyMessage
+                        }
+                    }
+                }
+            }
+
             ListItemText {
                 id: subtitleText
                 anchors { left: parent.left; right: parent.right; }
@@ -60,6 +89,10 @@ Page {
                 elide: Text.ElideNone
                 wrapMode: Text.Wrap
                 text: message
+
+                onLinkActivated: {
+                    dataModel.onLinkActivated(link, messageId);
+                }
             }
         }
 
@@ -93,38 +126,6 @@ Page {
             onClicked: {
                 dataModel.sendMessage(messageField.text);
                 messageField.text = "";
-            }
-        }
-
-        ToolButton {
-            flat: true
-            iconSource: "toolbar-menu"
-            onClicked: {
-                optionsMenu.open();
-            }
-
-            Menu {
-                id: optionsMenu
-                content: MenuLayout {
-                    MenuItem {
-                        text: "Test option"
-                        onClicked: {
-
-                        }
-                    }
-                    MenuItem {
-                        text: "Test option"
-                        onClicked: {
-
-                        }
-                    }
-                    MenuItem {
-                        text: "Test option"
-                        onClicked: {
-
-                        }
-                    }
-                }
             }
         }
     }

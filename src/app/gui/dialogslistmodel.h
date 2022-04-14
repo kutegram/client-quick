@@ -56,6 +56,7 @@ private:
     qint32 _offsetDate;
     TObject _offsetPeer;
 
+    TObject getMessagePeer(TObject m);
     TObject prepareListItem(TObject d);
 };
 

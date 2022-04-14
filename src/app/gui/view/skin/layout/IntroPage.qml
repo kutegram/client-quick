@@ -71,7 +71,7 @@ Page {
         ToolButton {
             flat: true
             iconSource: "toolbar-back"
-            onClicked: pageStack.depth <= 1 ? Qt.quit() : pageStack.pop()
+            onClicked: Qt.quit()
         }
     }
 }

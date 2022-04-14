@@ -50,14 +50,14 @@ Page {
                 anchors.fill: listItem.paddingItem
                 ListItemText {
                     id: titleText
-                    anchors { left: parent.left; right: parent.right; }
+                    anchors { left: parent.left; }
                     mode: listItem.mode
                     role: "Title"
                     text: title
                 }
                 ListItemText {
                     id: subtitleText
-                    anchors { left: parent.left; right: parent.right; }
+                    anchors { left: parent.left; }
                     mode: listItem.mode
                     role: "SubTitle"
                     text: message
@@ -81,6 +81,63 @@ Page {
             flat: true
             iconSource: "toolbar-back"
             onClicked: Qt.quit()
+        }
+
+        ToolButton {
+            flat: true
+            iconSource: "toolbar-menu"
+            onClicked: {
+                optionsMenu.open();
+            }
+
+            Menu {
+                id: optionsMenu
+                content: MenuLayout {
+                    MenuItem {
+                        text: "Log out"
+                        onClicked: {
+                            pageStack.clear();
+                            pageStack.push(introPage);
+                            telegram.reset();
+                        }
+                    }
+                    MenuItem {
+                        text: "About"
+                        onClicked: {
+                            dialog.open();
+                        }
+
+                        CommonDialog {
+                            id: dialog
+                            titleText: "About"
+                            titleIcon: "qrc:/icons/information_userguide.svg"
+                            buttonTexts: ["OK"]
+                            content: Flickable {
+                                anchors.fill: parent
+                                height: 200
+                                contentHeight: dialogColumn.height
+
+                                Column {
+                                    id: dialogColumn
+                                    anchors.fill: parent
+                                    anchors.margins: platformStyle.paddingLarge
+                                    height: 200
+
+                                    ListItemText {
+                                        anchors.left: parent.left
+                                        anchors.right: parent.right
+                                        id: dialogText
+                                        role: "SubTitle"
+                                        elide: Text.ElideNone
+                                        wrapMode: Text.Wrap
+                                        text: "Kutegram by curoviyxru\nAn unofficial Qt-based client for Telegram messenger.\nProject's website: http://kg.curoviyx.ru\nTelegram channel: https://t.me/kutegram\nTelegram chat: https://t.me/kutegramchat"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
 

@@ -22,7 +22,11 @@ public:
         MessageRole,
         TimestampRole,
         ReadStateRole,
-        AttachmentsRole
+        AttachmentsRole,
+        HasReplyRole,
+        ReplyTitleRole,
+        ReplyMessageRole,
+        ReplyColorRole
     };
 
     explicit HistoryListModel(QObject *parent = 0);
@@ -52,6 +56,7 @@ public slots:
     void client_updateNewMessage(TObject message, qint32 pts, qint32 pts_count);
     void client_updateEditMessage(TObject message, qint32 pts, qint32 pts_count);
     void client_updateDeleteMessages(TVector messages, qint32 pts, qint32 pts_count);
+    void onLinkActivated(QString link, qint32 messageId);
     void sendMessage(QString text);
 private:
     QList<qint32> _list;
