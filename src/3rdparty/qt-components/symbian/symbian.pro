@@ -9,10 +9,14 @@ INCLUDEPATH += $$PWD $$PWD/indicators
 CONFIG += qt plugin
 QT += declarative svg network script
 
-symbian {
+load(mobilityconfig)
+contains(MOBILITY_CONFIG, systeminfo) {
     CONFIG += mobility
     MOBILITY += feedback systeminfo
     DEFINES += HAVE_MOBILITY
+    message(Mobility API enabled)
+} else {
+    message(Mobility API not available)
 }
 
 SOURCES += \
