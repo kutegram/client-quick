@@ -43,9 +43,9 @@
 #ifdef Q_OS_SYMBIAN
 #include <aknappui.h>
 #include <avkon.rsg>
-#if defined(HAVE_SYMBIAN_INTERNAL)
+#if defined(HAVE_SYMBIAN_INTERNAL) || defined(HAVE_SYMBIAN_3)
 #include <aknsmallindicator.h>
-#endif // HAVE_SYMBIAN_INTERNAL
+#endif // HAVE_SYMBIAN_INTERNAL || HAVE_SYMBIAN_3
 #endif // Q_OS_SYMBIAN
 
 //#define Q_DEBUG_SPOPUPMANAGER
@@ -76,7 +76,7 @@ int SPopupManager::popupStackDepth() const
     return d_ptr->popupStackDepth;
 }
 
-#if defined(Q_OS_SYMBIAN) && defined(HAVE_SYMBIAN_INTERNAL)
+#if defined(HAVE_SYMBIAN_INTERNAL) || defined(HAVE_SYMBIAN_3)
 static void DoShowIndicatorPopupL()
 {
     MEikAppUiFactory *factory = CEikonEnv::Static()->AppUiFactory();
@@ -91,13 +91,13 @@ static void DoShowIndicatorPopupL()
     indicator->HandleIndicatorTapL();
     CleanupStack::PopAndDestroy(indicator);
 }
-#endif // Q_OS_SYMBIAN && HAVE_SYMBIAN_INTERNAL
+#endif // HAVE_SYMBIAN_INTERNAL || HAVE_SYMBIAN_3
 
 void SPopupManager::privateShowIndicatorPopup()
 {
-#if defined(Q_OS_SYMBIAN) && defined(HAVE_SYMBIAN_INTERNAL)
+#if defined(HAVE_SYMBIAN_INTERNAL) || defined(HAVE_SYMBIAN_3)
     QT_TRAP_THROWING(DoShowIndicatorPopupL());
-#endif // Q_OS_SYMBIAN && HAVE_SYMBIAN_INTERNAL
+#endif // HAVE_SYMBIAN_INTERNAL || HAVE_SYMBIAN_3
 }
 
 void SPopupManager::privateNotifyPopupOpen()

@@ -101,6 +101,11 @@ symbian {
 	LIBS += -leikcoctl // For CEikStatusPane
 	LIBS += -lavkon // For AknAppui SetOrientationL
 	LIBS += -lhal   // For calculating DPI values
+
+    contains(SYMBIAN_VERSION, Symbian3) {
+        DEFINES += HAVE_SYMBIAN_3
+        LIBS += -laknnotify
+    }
 }
 
 win32: LIBS += -lpsapi # for allocated memory info
