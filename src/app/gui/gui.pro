@@ -1,5 +1,4 @@
 VERSION = 0.2.0
-DEFINES += BUILD_VERSION=\"\\\"$$VERSION\\\"\"
 
 include(../../library/library.pri)
 
@@ -42,7 +41,7 @@ symbian {
 
     TARGET.UID3 = 0xE0713D51
     DEFINES += SYMBIAN_UID=$$TARGET.UID3
-    DEFINES += BUILD_PLATFORM=\"\\\"Symbian\\\"\"
+    DEFINES += BUILD_PLATFORM=\"Symbian\"
 	TARGET.CAPABILITY += $$APP_CAPABILITY
 	TARGET.EPOCHEAPSIZE = 0x400000 0x4000000
 	TARGET.EPOCSTACKSIZE = 0x14000
@@ -65,10 +64,10 @@ symbian {
 		"; Unique Vendor name" \
         ":\"curoviyxru\"" \
 		" "
-    header = "$${LITERAL_HASH}{\"Kutegram\"},(0xE0713D51),1,0,0,TYPE=SA,RU"
+    header = "$${LITERAL_HASH}{\"Kutegram\"},(0xE0713D51),0,2,0,TYPE=SA,RU"
 	package.pkg_prerules += vendor_info header
 	DEPLOYMENT += package
-    DEPLOYMENT.installer_header = "$${LITERAL_HASH}{\"Kutegram Installer\"},(0xE5E0AFB2),1,0,0"
+    DEPLOYMENT.installer_header = "$${LITERAL_HASH}{\"Kutegram Installer\"},(0xE5E0AFB2),0,2,0"
 
 	for(plugin, APP_PLUGINS) {
 		pluginstub = pluginstub$${plugin}

@@ -20,10 +20,6 @@ namespace gui {
 Application::Application(int argc, char *argv[])
 	: QApplication(argc, argv)
 {
-#ifdef QT_KEYPAD_NAVIGATION
-    //TODO: keypad UI navigation
-    QApplication::setNavigationMode(Qt::NavigationModeCursorAuto);
-#endif
     QCoreApplication::setAttribute((Qt::ApplicationAttribute) 9, false);
     //TODO: defined macros not only for Symbian.
 }
@@ -60,6 +56,11 @@ int Application::run() {
     applicationWindow->showNormal();
 #endif
 
+#ifdef QT_KEYPAD_NAVIGATION
+    //TODO: keypad UI navigation
+    QApplication::setNavigationMode(Qt::NavigationModeCursorAuto);
+#endif
+
 	return QApplication::exec();
 }
 
@@ -74,7 +75,7 @@ QDeclarativeView *Application::buildRootView() {
     view->engine()->rootContext()->setContextProperty("QTC_DISABLE_STATUS_BAR", QVariant(true));
 #endif
 
-    TelegramClient* client = new TelegramClient(this);
+    TelegramClient* client = new TelegramClient(this, "kutegram_quick");
     view->engine()->rootContext()->setContextProperty("telegram", client);
 
     SystemHandler* systemHandler = new SystemHandler(client);

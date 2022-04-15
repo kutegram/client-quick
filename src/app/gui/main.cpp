@@ -14,7 +14,7 @@ Q_DECL_EXPORT int main(int argc, char *argv[]) {
     qmlRegisterType<HistoryListModel>("ru.curoviyxru.kutegram", 1, 0, "HistoryListModel");
     qmlRegisterType<SystemHandler>("ru.curoviyxru.kutegram", 1, 0, "SystemHandler");
 
-    QApplication::setApplicationVersion(BUILD_VERSION);
+    QApplication::setApplicationVersion("0.2.0"); //TODO: dynamic versioning
     QApplication::setApplicationName("Kutegram");
     QApplication::setOrganizationName("curoviyxru");
     QApplication::setOrganizationDomain("kg.curoviyx.ru");
