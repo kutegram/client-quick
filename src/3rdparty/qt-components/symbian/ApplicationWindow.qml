@@ -166,4 +166,28 @@ Window {
         anchors.fill: parent
         enabled: pageStack.busy
     }
+
+    Keys.onPressed: {
+        if (event.key == Qt.Key_Context1) {
+            if (tbar.tools != null && tbar.tools.children.length > 0 && tbar.tools.children[0].enabled) {
+                tbar.tools.children[0].stateGroup.state = "Pressed"
+            }
+        } else if (event.key == Qt.Key_Context2) {
+            if (tbar.tools != null && tbar.tools.children.length > 1 && tbar.tools.children[tbar.tools.children.length - 1].enabled) {
+                tbar.tools.children[tbar.tools.children.length - 1].stateGroup.state = "Pressed"
+            }
+        }
+    }
+
+    Keys.onReleased: {
+        if (event.key == Qt.Key_Context1) {
+            if (tbar.tools != null && tbar.tools.children.length > 0 && tbar.tools.children[0].enabled) {
+                tbar.tools.children[0].stateGroup.state = ""
+            }
+        } else if (event.key == Qt.Key_Context2) {
+            if (tbar.tools != null && tbar.tools.children.length > 1 && tbar.tools.children[tbar.tools.children.length - 1].enabled) {
+                tbar.tools.children[tbar.tools.children.length - 1].stateGroup.state = ""
+            }
+        }
+    }
 }

@@ -58,6 +58,8 @@ Page {
         anchors.margins: platformStyle.paddingLarge
         spacing: platformStyle.paddingLarge
 
+        focus: true
+
         TextField {
             id: phoneField
             anchors.left: parent.left

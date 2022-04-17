@@ -64,6 +64,7 @@ Page {
             anchors.right: parent.right
             text: "Start"
             onClicked: telegram.start()
+            focus: true
         }
     }
 

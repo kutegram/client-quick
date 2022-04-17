@@ -20,6 +20,7 @@ namespace gui {
 Application::Application(int argc, char *argv[])
 	: QApplication(argc, argv)
 {
+    //TODO: do we need this?
     QCoreApplication::setAttribute((Qt::ApplicationAttribute) 9, false);
     //TODO: defined macros not only for Symbian.
 }
@@ -33,7 +34,7 @@ enum ScreenOrientation
 };
 
 int Application::run() {
-#if defined(Q_OS_SYMBIAN)
+#if defined(Q_OS_SYMBIAN) || defined(Q_WS_SIMULATOR)
 	QScopedPointer<QSplashScreen> splashScreen(buildSplashScreen());
     splashScreen->showFullScreen();
 #endif
@@ -49,7 +50,7 @@ int Application::run() {
             XChangeProperty(display, id, orientationAngleAtom, XA_CARDINAL, 32, PropModeReplace, (unsigned char*)&orientation, 1);
         }
 #endif
-#if defined(Q_OS_SYMBIAN)
+#if defined(Q_OS_SYMBIAN) || defined(Q_WS_SIMULATOR)
     splashScreen->finish(applicationWindow.data());
     applicationWindow->showFullScreen();
 #else
@@ -58,7 +59,7 @@ int Application::run() {
 
 #ifdef QT_KEYPAD_NAVIGATION
     //TODO: keypad UI navigation
-    QApplication::setNavigationMode(Qt::NavigationModeCursorAuto);
+    //QApplication::setNavigationMode(Qt::NavigationModeCursorAuto);
 #endif
 
 	return QApplication::exec();
@@ -69,7 +70,7 @@ QDeclarativeView *Application::buildRootView() {
 	QObject::connect(view->engine(), SIGNAL(quit()),
 	                 view.data(), SLOT(close()));
 	view->setResizeMode(QDeclarativeView::SizeRootObjectToView);
-#if defined(Q_OS_SYMBIAN)
+#if defined(Q_OS_SYMBIAN) || defined(Q_WS_SIMULATOR)
     view->engine()->rootContext()->setContextProperty("QTC_DISABLE_STATUS_BAR", QVariant(false));
 #else
     view->engine()->rootContext()->setContextProperty("QTC_DISABLE_STATUS_BAR", QVariant(true));

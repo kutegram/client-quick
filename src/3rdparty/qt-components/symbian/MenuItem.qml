@@ -179,7 +179,8 @@ Item {
                 break
             }
             default: {
-                event.accepted = false
+                //event.accepted = false
+                parent.clicked();
                 break
             }
         }

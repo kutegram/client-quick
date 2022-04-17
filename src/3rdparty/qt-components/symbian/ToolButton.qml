@@ -65,6 +65,8 @@ ImplicitSizeItem {
     signal platformReleased
     signal platformPressAndHold
 
+    property alias stateGroup: stateGroup
+
     onFlatChanged: {
         background.visible = !flat || (checkableItem.enabled && checkableItem.checked && !internal.isButtonRow(parent))
     }
