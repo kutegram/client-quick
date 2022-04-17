@@ -167,7 +167,7 @@ QString messageToHtml(TObject message, bool dialog)
 
 QColor userColor(qint64 id)
 {
-   return QColor::fromHsl(id % 360, 140, 140);
+   return QColor::fromHsl(id % 360, 160, 160);
 }
 
 QString peerNameToHtml(TObject peer, bool dialog)
