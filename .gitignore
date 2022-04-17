@@ -21,3 +21,4 @@ qrc_symbian.cpp
 *.rc
 manifest.aegis
 *.user.*
+*.autosave
