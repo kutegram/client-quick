@@ -26,7 +26,7 @@ Page {
             }
 
             onLoadedMessages: {
-                dialogsView.positionViewAtIndex(Math.min(dialogsView.count - lastSize, dialogsView.count - 1), ListView.Beginning);
+                dialogsView.positionViewAtIndex(Math.min(dialogsView.count - lastSize, dialogsView.count - 1), lastSize == 0 ? ListView.End : ListView.Beginning);
                 dialogsView.interactive = true;
                 lastSize = dialogsView.count;
             }
