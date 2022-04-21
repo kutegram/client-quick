@@ -479,4 +479,7 @@ void SDeclarativeScreen::privateSetDisplay(int width, int height, qreal dpi)
     d->settingDisplay = false;
 #endif
 }
+
+#if QT_VERSION < 0x050000
 #include "moc_sdeclarativescreen.cpp"
+#endif

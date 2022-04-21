@@ -136,6 +136,6 @@ void SystemHandler::client_updateNewMessage(TObject msg, qint32 pts, qint32 pts_
     //TODO: improve it
     if (msg["out"].toBool()) return;
 
-    showNotification(QApplication::translate("MainWindow", "New message", 0, QApplication::UnicodeUTF8),
+    showNotification(QApplication::translate("MainWindow", "New message"),
                 msg["message"].toString().mid(0, 40));
 }

@@ -37,6 +37,8 @@ public:
     bool canFetchMoreUpwards(const QModelIndex &parent) const;
     void fetchMoreUpwards(const QModelIndex &parent);
 
+    QHash<int, QByteArray> roleNames() const;
+
     TelegramClient* client() const;
     void setClient(TelegramClient* client);
 
@@ -78,6 +80,8 @@ private:
 
     qint32 _offsetId;
     qint32 _offsetDate;
+
+    QHash<int, QByteArray> _roles;
 
     TObject prepareListItem(TObject m);
     TObject getMessagePeer(TObject m);

@@ -31,6 +31,8 @@ public:
     bool canFetchMore(const QModelIndex &parent) const;
     void fetchMore(const QModelIndex &parent);
 
+    QHash<int, QByteArray> roleNames() const;
+
     TelegramClient* client() const;
     void setClient(TelegramClient* client);
 public slots:
@@ -55,6 +57,8 @@ private:
     qint32 _offsetId;
     qint32 _offsetDate;
     TObject _offsetPeer;
+
+    QHash<int, QByteArray> _roles;
 
     TObject getMessagePeer(TObject m);
     TObject prepareListItem(TObject d);

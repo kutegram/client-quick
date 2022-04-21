@@ -44,6 +44,9 @@
 class SymbianExtrasPlugin : public QDeclarativeExtensionPlugin
 {
     Q_OBJECT
+#if QT_VERSION >= 0x050000
+    Q_PLUGIN_METADATA(IID "symbianextrasplugin")
+#endif
 public:
     void initializeEngine(QDeclarativeEngine *engine, const char *uri) {
         QDeclarativeExtensionPlugin::initializeEngine(engine, uri);
@@ -57,4 +60,6 @@ public:
 
 #include "plugin.moc"
 
-Q_EXPORT_PLUGIN2(sybmianextrasplugin, SymbianExtrasPlugin);
+#if QT_VERSION < 0x050000
+Q_EXPORT_PLUGIN2(symbianextrasplugin, SymbianExtrasPlugin);
+#endif

@@ -5,6 +5,7 @@
 #include "telegramclient.h"
 #include "tlschema.h"
 #include "messageutils.h"
+#include <QtGlobal>
 
 using namespace TLType;
 
@@ -22,16 +23,23 @@ DialogsListModel::DialogsListModel(QObject *parent) :
     _lastRequestId(),
     _offsetId(),
     _offsetDate(),
-    _offsetPeer()
+    _offsetPeer(),
+    _roles()
 {
-    QHash<int, QByteArray> roles;
-    roles[DialogIdRole] = "dialogId";
-    roles[TitleRole] = "title";
-    roles[AvatarRole] = "avatar";
-    roles[MessageRole] = "message";
-    roles[TimestampRole] = "timestamp";
-    roles[UnreadCountRole] = "unreadCount";
-    setRoleNames(roles);
+    _roles[DialogIdRole] = "dialogId";
+    _roles[TitleRole] = "title";
+    _roles[AvatarRole] = "avatar";
+    _roles[MessageRole] = "message";
+    _roles[TimestampRole] = "timestamp";
+    _roles[UnreadCountRole] = "unreadCount";
+#if QT_VERSION < 0x050000
+    setRoleNames(_roles);
+#endif
+}
+
+QHash<int, QByteArray> DialogsListModel::roleNames() const
+{
+    return _roles;
 }
 
 QByteArray getKey(TObject peer)
@@ -42,11 +50,13 @@ QByteArray getKey(TObject peer)
     return idArray;
 }
 
-int DialogsListModel::rowCount(const QModelIndex &parent) const {
+int DialogsListModel::rowCount(const QModelIndex &parent) const
+{
     return _list.count();
 }
 
-QVariant DialogsListModel::data(const QModelIndex &index, int role) const {
+QVariant DialogsListModel::data(const QModelIndex &index, int role) const
+{
     if (!index.isValid() || index.row() < 0 || index.row() > _list.count())
         return QVariant();
 

@@ -63,7 +63,9 @@ static const int VERSION_MINOR = 0;
 class SymbianPlugin : public QDeclarativeExtensionPlugin
 {
 		Q_OBJECT
-
+#if QT_VERSION >= 0x050000
+    Q_PLUGIN_METADATA(IID "symbian_plugin_1_0")
+#endif
 public:
 
 		void initializeEngine(QDeclarativeEngine *engine, const char *uri) {
@@ -154,6 +156,8 @@ private:
 		SStyleFactory *style;
 };
 
+#if QT_VERSION < 0x050000
 #include "plugin.moc"
 
 Q_EXPORT_PLUGIN2(symbian_plugin_1_0, SymbianPlugin)
+#endif

@@ -38,6 +38,7 @@
 **
 ****************************************************************************/
 
+#include <QtGlobal>
 #include <QtDeclarative>
 
 #include "models/qrangemodel.h"
@@ -46,7 +47,9 @@
 class QtComponentsPlugin : public QDeclarativeExtensionPlugin
 {
     Q_OBJECT
-
+#if QT_VERSION >= 0x050000
+    Q_PLUGIN_METADATA(IID "qt_component_plugin_1_0")
+#endif
 public:
     void registerTypes(const char *uri) {
         Q_ASSERT(uri == QLatin1String("Qt.labs.components"));
@@ -55,6 +58,8 @@ public:
     }
 };
 
+#if QT_VERSION < 0x050000
 #include "plugin.moc"
 
 Q_EXPORT_PLUGIN2(qt_component_plugin_1_0, QtComponentsPlugin);
+#endif

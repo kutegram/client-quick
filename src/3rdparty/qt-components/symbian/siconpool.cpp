@@ -43,6 +43,7 @@
 #include <QPainter>
 #include <QSvgRenderer>
 #include <QPixmap>
+#include <QBitmap>
 #include <QSizeF>
 #include <QHash>
 
@@ -174,9 +175,9 @@ QPixmap SIconPool::loadIcon(
 
     if (!pm.isNull() && color.isValid()) {
         // Colorize the icon
-        QPixmap mask = pm.alphaChannel();
+        QPixmap mask = pm.mask();
         pm.fill(color);
-        pm.setAlphaChannel(mask);
+        pm.setMask(mask);
     }
 #ifdef Q_DEBUG_ICON
     if (pm.isNull()) {

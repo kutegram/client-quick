@@ -20,8 +20,8 @@ Q_DECL_EXPORT int main(int argc, char *argv[]) {
     QApplication::setOrganizationDomain("kg.curoviyx.ru");
 
     QTextCodec *codec = QTextCodec::codecForName("UTF-8");
-    QTextCodec::setCodecForTr(codec);
-    QTextCodec::setCodecForCStrings(codec);
+    //QTextCodec::setCodecForTr(codec);
+    //QTextCodec::setCodecForCStrings(codec);
     QTextCodec::setCodecForLocale(codec);
 
     return app.run();

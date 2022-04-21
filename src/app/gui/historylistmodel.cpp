@@ -11,6 +11,7 @@
 #include "tlschema.h"
 #include "systemhandler.h"
 #include "messageutils.h"
+#include <QtGlobal>
 
 using namespace TLType;
 
@@ -29,21 +30,28 @@ HistoryListModel::HistoryListModel(QObject *parent) :
     _lastRequestId(),
     _replyRequestId(),
     _offsetId(),
-    _offsetDate()
+    _offsetDate(),
+    _roles()
 {
-    QHash<int, QByteArray> roles;
-    roles[MessageIdRole] = "messageId";
-    roles[TitleRole] = "title";
-    roles[AvatarRole] = "avatar";
-    roles[MessageRole] = "message";
-    roles[TimestampRole] = "timestamp";
-    roles[ReadStateRole] = "readState";
-    roles[AttachmentsRole] = "attachments";
-    roles[HasReplyRole] = "hasReply";
-    roles[ReplyTitleRole] = "replyTitle";
-    roles[ReplyMessageRole] = "replyMessage";
-    roles[ReplyColorRole] = "replyColor";
-    setRoleNames(roles);
+    _roles[MessageIdRole] = "messageId";
+    _roles[TitleRole] = "title";
+    _roles[AvatarRole] = "avatar";
+    _roles[MessageRole] = "message";
+    _roles[TimestampRole] = "timestamp";
+    _roles[ReadStateRole] = "readState";
+    _roles[AttachmentsRole] = "attachments";
+    _roles[HasReplyRole] = "hasReply";
+    _roles[ReplyTitleRole] = "replyTitle";
+    _roles[ReplyMessageRole] = "replyMessage";
+    _roles[ReplyColorRole] = "replyColor";
+#if QT_VERSION < 0x050000
+    setRoleNames(_roles);
+#endif
+}
+
+QHash<int, QByteArray> HistoryListModel::roleNames() const
+{
+    return _roles;
 }
 
 int HistoryListModel::rowCount(const QModelIndex &parent) const

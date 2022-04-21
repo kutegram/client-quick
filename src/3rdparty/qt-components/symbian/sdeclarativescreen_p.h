@@ -43,7 +43,8 @@
 
 #include "sdeclarativescreen.h"
 #include <QtCore/qpointer.h>
-#include <QtGui/qgraphicsview.h>
+#include <QtGui>
+#include <QGraphicsView>
 
 QT_FORWARD_DECLARE_CLASS(QDeclarativeEngine)
 

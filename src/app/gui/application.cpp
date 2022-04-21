@@ -1,7 +1,7 @@
 #include <QtCore/QDir>
 #include <QtCore/QFileInfo>
-#include <QtGui/QSplashScreen>
-#include <QtGui/QDesktopWidget>
+#include <QSplashScreen>
+#include <QDesktopWidget>
 #include <QtDeclarative/QDeclarativeEngine>
 #include <QtDeclarative/QDeclarativeContext>
 #include <QtDeclarative/QDeclarativeComponent>
@@ -105,9 +105,9 @@ QSplashScreen *Application::buildSplashScreen() {
     painter.end();
     QScopedPointer<QSplashScreen> splashScreen(new QSplashScreen(splashPixmap));
     if (desktopRect.width() > desktopRect.height()) {
-        splashScreen->setAttribute(Qt::WA_LockLandscapeOrientation, true);
+        splashScreen->setAttribute((Qt::WidgetAttribute) 129, true);
     } else {
-        splashScreen->setAttribute(Qt::WA_LockPortraitOrientation, true);
+        splashScreen->setAttribute((Qt::WidgetAttribute) 130, true);
     }
 	return splashScreen.take();
 }

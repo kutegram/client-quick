@@ -48,6 +48,8 @@
 #include "siconpool.h"
 #include "sdeclarative.h"
 
+#include <QTileRules>
+
 SDeclarativeMaskedImagePrivate::~SDeclarativeMaskedImagePrivate()
 {
     releasePixmaps();

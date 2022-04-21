@@ -121,4 +121,6 @@ int SNetworkInfo::networkSignalStrength() const
 #endif
 }
 
+#if QT_VERSION < 0x050000
 #include "moc_snetworkinfo.cpp"
+#endif

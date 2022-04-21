@@ -228,4 +228,6 @@ QString SStyleEngine::fontFamilyParameter(const QString &parameter) const
     return d->fontFamilyParameters.value(parameter);
 }
 
+#if QT_VERSION < 0x050000
 #include "moc_sstyleengine.cpp"
+#endif

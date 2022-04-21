@@ -1,8 +1,8 @@
 #ifndef APP_GUI_APPLICATION_H
 #define APP_GUI_APPLICATION_H
 
-#include <QtGui/QApplication>
-#include <QtGui/QSplashScreen>
+#include <QApplication>
+#include <QSplashScreen>
 #include <QtCore/QScopedPointer>
 #include <QtDeclarative/QDeclarativeView>
 

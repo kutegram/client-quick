@@ -10,6 +10,11 @@ include(../../3rdparty/qt-components/symbian/extras/extras.pri)
 CONFIG += qt mobility
 
 QT += core declarative network xml
+greaterThan(QT_MAJOR_VERSION, 4): {
+    CONFIG += c++11
+}
+
+
 TARGET = Kutegram
 DESTDIR = $$APP_INSTALL_BINS
 
@@ -33,6 +38,12 @@ SOURCES += \
     historylistmodel.cpp \
     systemhandler.cpp \
     messageutils.cpp
+
+#android {
+#    OTHER_FILES += $$_PRO_FILE_PWD_/android/AndroidManifest.xml
+#    ANDROID_PACKAGE_SOURCE_DIR = $$_PRO_FILE_PWD_/android
+#    ICON = view/skin/icons/hicolor/scalable/apps/kutegram.svg
+#}
 
 symbian {
     isEmpty(ICON):exists($${TARGET}.svg):ICON = $${TARGET}.svg
