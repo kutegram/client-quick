@@ -7,6 +7,7 @@
 
 QString messageToHtml(TObject message, bool dialog = false);
 QColor userColor(qint64 id);
+QString getPeerName(TObject peer);
 QString peerNameToHtml(TObject peer, bool dialog = false);
 
 #endif // MESSAGEUTILS_H

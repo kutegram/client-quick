@@ -11,6 +11,9 @@
         <file alias="create_message.svg">icons/hicolor/scalable/toolbar/create_message.svg</file>
         <file alias="error.svg">icons/hicolor/scalable/error.svg</file>
         <file alias="information_userguide.svg">icons/hicolor/scalable/information_userguide.svg</file>
+        <file alias="contacts.svg">icons/hicolor/scalable/contacts.svg</file>
+        <file alias="group.svg">icons/hicolor/scalable/group.svg</file>
+        <file alias="podcast.svg">icons/hicolor/scalable/podcast.svg</file>
     </qresource>
     <qresource prefix="/images">
         <file alias="code.png">images/code.png</file>

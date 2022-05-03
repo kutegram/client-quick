@@ -5,8 +5,8 @@
 #include <QMutex>
 #include <QHash>
 #include "telegramstream.h"
-
-class TelegramClient;
+#include "telegramclient.h"
+#include <QPointer>
 
 class HistoryListModel : public QAbstractListModel
 {
@@ -69,7 +69,7 @@ private:
     QHash<qint64, TObject> _users;
     QHash<qint32, qint32> _replies;
 
-    TelegramClient* _client;
+    QPointer<TelegramClient> _client;
     QMutex _mutex;
 
     bool _gotFull;

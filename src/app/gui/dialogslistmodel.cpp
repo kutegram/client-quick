@@ -5,6 +5,7 @@
 #include "telegramclient.h"
 #include "tlschema.h"
 #include "messageutils.h"
+#include "peerphotoprovider.h"
 
 using namespace TLType;
 
@@ -71,7 +72,7 @@ QVariant DialogsListModel::data(const QModelIndex &index, int role) const {
 
 bool DialogsListModel::canFetchMore(const QModelIndex &parent) const
 {
-    return _client && !_gotFull && !_lastRequestId && _client->apiReady();
+    return !_client.isNull() && !_gotFull && !_lastRequestId && _client->apiReady();
 }
 
 //TODO: fix some duplicate results
@@ -93,7 +94,7 @@ void DialogsListModel::setClient(TelegramClient *client)
     QMutexLocker locker(&_mutex);
     beginResetModel();
 
-    if (_client)
+    if (!_client.isNull())
         disconnect(_client, 0, this, 0);
 
     _list.clear();
@@ -211,10 +212,12 @@ TObject DialogsListModel::prepareListItem(TObject d)
     case PeerChannel:
         item["title"] = _chats[pid]["title"].toString();
         item["dialogId"] = tlSerialize<&writeTLInputPeer>(getInputPeer(_chats[pid]));
+        item["avatar"] = PeerPhotoProvider::getId(_chats[pid]);
         break;
     case PeerUser:
         item["title"] = QString(_users[pid]["first_name"].toString() + " " + _users[pid]["last_name"].toString());
         item["dialogId"] = tlSerialize<&writeTLInputPeer>(getInputPeer(_users[pid]));
+        item["avatar"] = PeerPhotoProvider::getId(_users[pid]);
         break;
     }
 

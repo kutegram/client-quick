@@ -24,7 +24,8 @@ HEADERS += \
     dialogslistmodel.h \
     historylistmodel.h \
     systemhandler.h \
-    messageutils.h
+    messageutils.h \
+    peerphotoprovider.h
 
 SOURCES += \
 	main.cpp \
@@ -32,7 +33,8 @@ SOURCES += \
     dialogslistmodel.cpp \
     historylistmodel.cpp \
     systemhandler.cpp \
-    messageutils.cpp
+    messageutils.cpp \
+    peerphotoprovider.cpp
 
 symbian {
     isEmpty(ICON):exists($${TARGET}.svg):ICON = $${TARGET}.svg
@@ -42,9 +44,9 @@ symbian {
     TARGET.UID3 = 0xE0713D51
     DEFINES += SYMBIAN_UID=$$TARGET.UID3
     DEFINES += BUILD_PLATFORM=\"Symbian\"
-	TARGET.CAPABILITY += $$APP_CAPABILITY
-	TARGET.EPOCHEAPSIZE = 0x400000 0x4000000
-	TARGET.EPOCSTACKSIZE = 0x14000
+    TARGET.CAPABILITY += $$APP_CAPABILITY
+    TARGET.EPOCHEAPSIZE = 0x400000 0x4000000
+    TARGET.EPOCSTACKSIZE = 0x14000
 
     supported_platforms = \
         "[0x1028315F],0,0,0,{\"S60ProductID\"}" \ # Symbian^1

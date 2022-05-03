@@ -8,6 +8,7 @@
 #include "gui/application.h"
 #include "telegramclient.h"
 #include "systemhandler.h"
+#include "peerphotoprovider.h"
 
 #ifdef Q_WS_X11
 #include <QX11Info>
@@ -80,6 +81,9 @@ QDeclarativeView *Application::buildRootView() {
 
     SystemHandler* systemHandler = new SystemHandler(client);
     view->engine()->rootContext()->setContextProperty("systemHandler", systemHandler);
+
+    PeerPhotoProvider* peerPhotoProvider = new PeerPhotoProvider(client);
+    view->engine()->addImageProvider("peer", peerPhotoProvider);
 
 	view->engine()->addImportPath(
 	    QLatin1String("../../resource/demo/imports"));

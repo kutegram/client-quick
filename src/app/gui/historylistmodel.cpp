@@ -11,6 +11,7 @@
 #include "tlschema.h"
 #include "systemhandler.h"
 #include "messageutils.h"
+#include "peerphotoprovider.h"
 
 using namespace TLType;
 
@@ -87,7 +88,7 @@ QVariant HistoryListModel::data(const QModelIndex &index, int role) const
 
 bool HistoryListModel::canFetchMoreUpwards(const QModelIndex &parent) const
 {
-    return _client && ID(_peer) && !_gotFull && !_lastRequestId && !_replyRequestId && _client->apiReady();
+    return !_client.isNull() && ID(_peer) && !_gotFull && !_lastRequestId && !_replyRequestId && _client->apiReady();
 }
 
 void HistoryListModel::fetchMoreUpwards(const QModelIndex &parent)
@@ -108,7 +109,7 @@ void HistoryListModel::setClient(TelegramClient *client)
     QMutexLocker locker(&_mutex);
     beginResetModel();
 
-    if (_client)
+    if (!_client.isNull())
         disconnect(_client, 0, this, 0);
 
     _list.clear();
@@ -231,7 +232,7 @@ void HistoryListModel::gotHistoryMessages(qint64 mtm, qint32 count, TVector m, T
         emit loadedMessages();
     }
 
-    if (!requiredReplies.isEmpty() && _client)
+    if (!requiredReplies.isEmpty() && !_client.isNull())
         _replyRequestId = _client->getMessages(requiredReplies);
 }
 
@@ -357,6 +358,7 @@ TObject HistoryListModel::prepareListItem(TObject m)
     item["title"] = peerNameToHtml(peer);
     item["message"] = messageToHtml(m);
     item["messageId"] = m["id"].toInt();
+    item["avatar"] = PeerPhotoProvider::getId(peer);
 
     bool hasReply = ID(m["reply_to"].toMap());
     item["hasReply"] = hasReply;
@@ -373,7 +375,7 @@ TObject HistoryListModel::prepareListItem(TObject m)
 
 void HistoryListModel::sendMessage(QString text)
 {
-    if (_client && ID(_peer))
+    if (!_client.isNull() && ID(_peer))
         _client->sendMessage(_peer, text);
 }
 

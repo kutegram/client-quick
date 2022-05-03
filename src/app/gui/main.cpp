@@ -5,6 +5,7 @@
 #include "dialogslistmodel.h"
 #include "historylistmodel.h"
 #include "systemhandler.h"
+#include <QResource>
 
 Q_DECL_EXPORT int main(int argc, char *argv[]) {
     gui::Application app(argc, argv);
@@ -14,10 +15,14 @@ Q_DECL_EXPORT int main(int argc, char *argv[]) {
     qmlRegisterType<HistoryListModel>("ru.curoviyxru.kutegram", 1, 0, "HistoryListModel");
     qmlRegisterType<SystemHandler>("ru.curoviyxru.kutegram", 1, 0, "SystemHandler");
 
-    QApplication::setApplicationVersion("0.2.0"); //TODO: dynamic versioning
+    //TODO: dynamic versioning
+    QApplication::setApplicationVersion("0.2.0");
     QApplication::setApplicationName("Kutegram");
     QApplication::setOrganizationName("curoviyxru");
     QApplication::setOrganizationDomain("kg.curoviyx.ru");
+
+    //TODO: rcc compilation and deploying
+    QResource::registerResource("external.rcc");
 
     QTextCodec *codec = QTextCodec::codecForName("UTF-8");
     QTextCodec::setCodecForTr(codec);

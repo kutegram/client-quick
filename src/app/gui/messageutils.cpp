@@ -170,22 +170,23 @@ QColor userColor(qint64 id)
    return QColor::fromHsl(id % 360, 160, 160);
 }
 
-QString peerNameToHtml(TObject peer, bool dialog)
+QString getPeerName(TObject peer)
 {
-    QString peerName;
-
     switch (ID(peer)) {
-    case TLType::UserEmpty:
+    //case TLType::UserEmpty:
     case TLType::User:
-        peerName = peer["first_name"].toString() + " " + peer["last_name"].toString();
+        return peer["first_name"].toString() + ' ' + peer["last_name"].toString();
         break;
     default:
         //this is a chat, probably.
-        peerName = peer["title"].toString();
+        return peer["title"].toString();
         break;
     }
+}
 
-    //peerName = peerName.mid(0, 40) + (peerName.length() > 40 ? "..." : "");
+QString peerNameToHtml(TObject peer, bool dialog)
+{
+    QString peerName = getPeerName(peer);
     if (dialog) peerName.append(":");
 
     return "<span style=\"font-weight:bold;color:" + userColor(peer["id"].toLongLong()).name() + "\">" + peerName + "</span>";

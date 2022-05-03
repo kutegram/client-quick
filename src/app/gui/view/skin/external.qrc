@@ -1,0 +1,14 @@
+<RCC>
+    <qresource prefix="/anims">
+        <file alias="1.gif">images/anims/1.gif</file>
+        <file alias="2.gif">images/anims/2.gif</file>
+        <file alias="3.gif">images/anims/3.gif</file>
+        <file alias="4.gif">images/anims/4.gif</file>
+        <file alias="5.gif">images/anims/5.gif</file>
+        <file alias="6.gif">images/anims/6.gif</file>
+        <file alias="7.gif">images/anims/7.gif</file>
+        <file alias="8.gif">images/anims/8.gif</file>
+        <file alias="9.gif">images/anims/9.gif</file>
+        <file alias="10.gif">images/anims/10.gif</file>
+    </qresource>
+</RCC>

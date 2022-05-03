@@ -46,21 +46,45 @@ Page {
 
         delegate: ListItem {
             id: listItem
-            Column {
+            Row {
                 anchors.fill: listItem.paddingItem
-                ListItemText {
-                    id: titleText
-                    anchors { left: parent.left; }
-                    mode: listItem.mode
-                    role: "Title"
-                    text: title
+                spacing: platformStyle.paddingMedium
+
+                Image {
+                    asynchronous: true
+                    fillMode: Image.PreserveAspectFit
+                    smooth: true
+                    source: avatar
+                    anchors.top: parent.top
+                    anchors.bottom: parent.bottom
+                    width: parent.height
+                    height: parent.height
+
+//                    BusyIndicator {
+//                        running: parent.state == Image.Loading
+//                        visible: parent.state == Image.Loading
+//                        anchors.top: parent.top
+//                        anchors.bottom: parent.bottom
+//                        width: parent.width
+//                        height: parent.height
+//                    }
                 }
-                ListItemText {
-                    id: subtitleText
-                    anchors { left: parent.left; }
-                    mode: listItem.mode
-                    role: "SubTitle"
-                    text: message
+                Column {
+                    anchors.fill: parent.paddingItem
+                    ListItemText {
+                        id: titleText
+                        anchors { left: parent.left; }
+                        mode: listItem.mode
+                        role: "Title"
+                        text: title
+                    }
+                    ListItemText {
+                        id: subtitleText
+                        anchors { left: parent.left; }
+                        mode: listItem.mode
+                        role: "SubTitle"
+                        text: message
+                    }
                 }
             }
 
