@@ -22,3 +22,9 @@ qrc_symbian.cpp
 manifest.aegis
 *.user.*
 *.autosave
+debian
+build-stamp
+configure-stamp
+*.changes
+*.deb
+obj
